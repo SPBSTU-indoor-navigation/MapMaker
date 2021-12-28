@@ -416,7 +416,7 @@ namespace IMDF.Feature
 
                 restriction = building.restriction;
                 display_point = RefferencePointEditor.GetGeoJSONPoint(building);
-                address_id = building.addressId.guid;
+                address_id = building.addressId?.guid;
             }
         }
 
@@ -1057,7 +1057,10 @@ namespace IMDF.Feature
                 (GameObject.FindObjectsOfType<IMDF.Building>(true).Select(t => Footprint.FootprintFromBuilding(t)).SelectMany(t => t).ToArray(), "footprint"),
                 (GameObject.FindObjectsOfType<IMDF.Venue>(true).Select(t => new Venue(t)).ToArray(), "venue"),
                 (GameObject.FindObjectsOfType<IMDF.Amenity>(true).Select(t => new Amenity(t)).ToArray(), "amenity"),
-                (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IAddress>().Select(t => new Address(t.address)).Distinct().ToArray(), "address"),
+                (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IAddress>()
+                    .Where(t => t.address != null)
+                    .Select(t => new Address(t.address))
+                    .Distinct().ToArray(), "address"),
             };
 
             var path = EditorUtility.SaveFolderPanel("Save IMDF achive", PlayerPrefs.GetString("IMDF_PATH") ?? "", "IMDF");
