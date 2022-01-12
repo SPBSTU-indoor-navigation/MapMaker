@@ -678,6 +678,7 @@ namespace IMDF.Feature
     [JsonConverter(typeof(Opening))]
     public class Opening : Feature<Opening.Properties>
     {
+
         public class Door
         {
             [JsonConverter(typeof(StringEnumConverter))]
@@ -732,6 +733,7 @@ namespace IMDF.Feature
         public class Properties
         {
             public Category category;
+            public Unit.Category? unit_categoty;
             public int? accessibility = null;
             public int? access_control = null;
             public Door door;
@@ -743,6 +745,7 @@ namespace IMDF.Feature
             public Properties(IMDF.Opening opening)
             {
                 category = opening.category;
+                unit_categoty = opening.GetComponentInParent<IMDF.Unit>(true)?.category;
                 name = opening.localizedName.getFeature();
                 alt_name = opening.altName.getFeature();
 
@@ -1017,6 +1020,58 @@ namespace IMDF.Feature
         }
     }
 
+
+
+    [JsonConverter(typeof(EnviromentUnit))]
+    public class EnviromentUnit : Feature<EnviromentUnit.Properties>
+    {
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum Category
+        {
+            [EnumMember(Value = "road.main")] roadMain,
+            [EnumMember(Value = "road.dirt")] roadDirt,
+            [EnumMember(Value = "road.pedestrian.main")] roadPedestrianMain,
+            grass,
+            tree,
+            forest
+        }
+
+        public class Properties
+        {
+            public Category category;
+
+            public LocalizedName name;
+            public LocalizedName alt_name;
+
+            public GeoJSONPoint display_point;
+
+            public Properties(IMDF.EnviromentUnit unit)
+            {
+                category = unit.category;
+                name = unit.localizedName.getFeature();
+                alt_name = unit.altName.getFeature();
+
+                display_point = RefferencePointEditor.GetGeoJSONPoint(unit);
+            }
+        }
+
+        public EnviromentUnit() { }
+
+        public EnviromentUnit(IMDF.EnviromentUnit unit)
+        {
+            identifier = unit.guid;
+            geometry = unit.GetGeoJSONGeometry();
+            properties = new Properties(unit);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            base.WriteJson(writer, value, serializer, "enviroment_unit");
+        }
+
+    }
+
+
     public class Manifest
     {
         public string version;
@@ -1057,6 +1112,7 @@ namespace IMDF.Feature
                 (GameObject.FindObjectsOfType<IMDF.Building>(true).Select(t => Footprint.FootprintFromBuilding(t)).SelectMany(t => t).ToArray(), "footprint"),
                 (GameObject.FindObjectsOfType<IMDF.Venue>(true).Select(t => new Venue(t)).ToArray(), "venue"),
                 (GameObject.FindObjectsOfType<IMDF.Amenity>(true).Select(t => new Amenity(t)).ToArray(), "amenity"),
+                (GameObject.FindObjectsOfType<IMDF.EnviromentUnit>(true).Select(t => new EnviromentUnit(t)).ToArray(), "enviroment"),
                 (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IAddress>()
                     .Where(t => t.address != null)
                     .Select(t => new Address(t.address))

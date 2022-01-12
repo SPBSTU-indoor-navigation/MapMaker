@@ -32,7 +32,7 @@ public class GeometryLineEdit : MonoBehaviour
             if (EditorGUI.EndChangeCheck())
             {
                 Undo.RecordObject(obj, "Change line direction");
-                obj.secondPoint = Vector3.Normalize(newPoint) * obj.length;
+                obj.secondPoint = obj.length > 0 ? Vector3.Normalize(newPoint) * obj.length : newPoint;
             }
         }
     }

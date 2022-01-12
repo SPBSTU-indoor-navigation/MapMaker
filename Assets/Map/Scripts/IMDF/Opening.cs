@@ -22,7 +22,6 @@ namespace IMDF
         public bool showDisplayPoint = false;
         bool IRefferencePoint.showDisplayPoint => showDisplayPoint;
 
-
         [HideInInspector, SerializeField]
         Vector2 displayPoint_ = Vector2.right;
 
