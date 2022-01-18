@@ -4,21 +4,14 @@ using UnityEngine;
 
 namespace IMDF
 {
-    public class Amenity : GeometryPoint
+    public class EnviromentAmenity : GeometryPoint
     {
-        public Feature.Amenity.CategoryMin category;
+
         public LocalizedName localizedName;
         public LocalizedName altName;
-        public Unit[] units;
-
-        [Space]
-        public string hours;
-        public string phone;
-        public string website;
-        public Address address;
-
-        [Space]
+        public Feature.EnviromentAmenity.Category category;
         public int detailLevel;
+
 
         private void OnDrawGizmos()
         {

@@ -24,6 +24,11 @@ namespace IMDF
 
             return new Feature.LocalizedName(local);
         }
+
+        public bool IsEmpty()
+        {
+            return string.IsNullOrWhiteSpace(ru) && string.IsNullOrWhiteSpace(en);
+        }
     }
 
 }

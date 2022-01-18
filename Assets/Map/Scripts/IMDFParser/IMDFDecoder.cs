@@ -773,12 +773,11 @@ namespace IMDF.Feature
     [JsonConverter(typeof(Amenity))]
     public class Amenity : Feature<Amenity.Properties>
     {
+        [JsonConverter(typeof(StringEnumConverter))]
         public enum CategoryMin
         {
             atm, //Банкомат
-            copymachine,
             eatingdrinking,
-            elevator,
             escalator,
             entry, //вход
             faregate, //пропускной вход
@@ -789,13 +788,13 @@ namespace IMDF.Feature
             [EnumMember(Value = "restroom.male")] restroomMale,
             seat,
             security,
+            stairs,
             [EnumMember(Value = "security.checkpoint")] securityCheckpoint,
             smokingarea,
             studentservices,
             swimmingpool,
             vendingmachine,
             unspecified
-
         }
 
         [JsonConverter(typeof(StringEnumConverter))]
@@ -978,7 +977,7 @@ namespace IMDF.Feature
 
         public class Properties
         {
-            public Category category;
+            public CategoryMin category;
             public LocalizedName name;
             public LocalizedName alt_name;
             public Guid[] unit_ids;
@@ -986,6 +985,7 @@ namespace IMDF.Feature
             public string hours;
             public string phone;
             public string website;
+            public int detailLevel;
             public Guid? address_id;
 
             public Properties() { }
@@ -993,10 +993,11 @@ namespace IMDF.Feature
             public Properties(IMDF.Amenity amenity)
             {
                 category = amenity.category;
-                name = amenity.localizedName.getFeature();
-                alt_name = amenity.altName.getFeature();
+                name = amenity.localizedName.IsEmpty() ? amenity.GetComponentInParent<IMDF.Unit>(true).localizedName.getFeature() : amenity.localizedName.getFeature();
+                alt_name = amenity.altName.IsEmpty() ? amenity.GetComponentInParent<IMDF.Unit>(true).altName.getFeature() : amenity.altName.getFeature();
                 unit_ids = amenity.units.Select(t => t.guid).ToArray();
 
+                detailLevel = amenity.detailLevel;
                 hours = amenity.hours.OrNull();
                 phone = amenity.phone.OrNull();
                 website = amenity.website.OrNull();
@@ -1019,8 +1020,6 @@ namespace IMDF.Feature
             base.WriteJson(writer, value, serializer, "amenity");
         }
     }
-
-
 
     [JsonConverter(typeof(EnviromentUnit))]
     public class EnviromentUnit : Feature<EnviromentUnit.Properties>
@@ -1071,6 +1070,95 @@ namespace IMDF.Feature
 
     }
 
+    [JsonConverter(typeof(Attraction))]
+    public class Attraction : Feature<Attraction.Properties>
+    {
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum Category
+        {
+            building
+        }
+
+        public class Properties
+        {
+            public Category category;
+
+            public LocalizedName name;
+            public LocalizedName alt_name;
+            public LocalizedName short_name;
+            public string image;
+
+            public Guid building_id;
+
+            public Properties(IMDF.Attraction attraction)
+            {
+                category = attraction.category;
+                name = attraction.localizedName.getFeature();
+                alt_name = attraction.altName.getFeature();
+                short_name = attraction.shortName.getFeature();
+                building_id = attraction.building.guid;
+                image = string.IsNullOrWhiteSpace(attraction.image) ? null : attraction.image;
+            }
+        }
+
+        public Attraction() { }
+
+        public Attraction(IMDF.Attraction attraction)
+        {
+            identifier = attraction.guid;
+            geometry = new GeoJSONPoint(attraction.GetPoint());
+            properties = new Properties(attraction);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            base.WriteJson(writer, value, serializer, "attraction");
+        }
+
+    }
+
+    [JsonConverter(typeof(EnviromentAmenity))]
+    public class EnviromentAmenity : Feature<EnviromentAmenity.Properties>
+    {
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum Category
+        {
+            [EnumMember(Value = "parking.car")] parkingCar,
+            [EnumMember(Value = "parking.bicycle")] parkingBicycle
+        }
+
+        public class Properties
+        {
+            public Category category;
+
+            public LocalizedName name;
+            public LocalizedName alt_name;
+            public int detailLevel;
+
+            public Properties(IMDF.EnviromentAmenity amenity)
+            {
+                category = amenity.category;
+                name = amenity.localizedName.getFeature();
+                alt_name = amenity.altName.getFeature();
+                detailLevel = amenity.detailLevel;
+            }
+        }
+
+        public EnviromentAmenity() { }
+
+        public EnviromentAmenity(IMDF.EnviromentAmenity amenity)
+        {
+            identifier = amenity.guid;
+            geometry = new GeoJSONPoint(amenity.GetPoint());
+            properties = new Properties(amenity);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            base.WriteJson(writer, value, serializer, "enviroment_amenity");
+        }
+    }
+
 
     public class Manifest
     {
@@ -1113,10 +1201,12 @@ namespace IMDF.Feature
                 (GameObject.FindObjectsOfType<IMDF.Venue>(true).Select(t => new Venue(t)).ToArray(), "venue"),
                 (GameObject.FindObjectsOfType<IMDF.Amenity>(true).Select(t => new Amenity(t)).ToArray(), "amenity"),
                 (GameObject.FindObjectsOfType<IMDF.EnviromentUnit>(true).Select(t => new EnviromentUnit(t)).ToArray(), "enviroment"),
+                (GameObject.FindObjectsOfType<IMDF.EnviromentAmenity>(true).Select(t => new EnviromentAmenity(t)).ToArray(), "enviromentAmenity"),
                 (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IAddress>()
                     .Where(t => t.address != null)
                     .Select(t => new Address(t.address))
                     .Distinct().ToArray(), "address"),
+                (GameObject.FindObjectsOfType<IMDF.Attraction>(true).Select(t => new Attraction(t)).ToArray(), "attraction"),
             };
 
             var path = EditorUtility.SaveFolderPanel("Save IMDF achive", PlayerPrefs.GetString("IMDF_PATH") ?? "", "IMDF");

@@ -136,6 +136,8 @@ public class PolygonGeometry : MonoBehaviour
     }
 
     [CustomEditor(typeof(PolygonGeometry))]
+
+    [CanEditMultipleObjects]
     public class PolygonGeometryEditor : Editor
     {
 
