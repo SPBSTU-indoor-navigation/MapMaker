@@ -63,6 +63,19 @@ namespace IMDF
         }
     }
 
+    [RequireComponent(typeof(GeometryMultyLineEdit))]
+    public class GeometryMultyLine : FeatureMB
+    {
+        public Feature.Point[] GetPoints()
+        {
+            var lr = GetComponent<LineRenderer>();
+            Vector3[] positions = new Vector3[lr.positionCount];
+            lr.GetPositions(positions);
+
+            return positions.Select(t => GeoMap.CalculateGeo(transform.TransformPoint(t)).GetPoint()).ToArray();
+        }
+    }
+
     public class GeometryPoint : FeatureMB
     {
         public Feature.Point GetPoint()

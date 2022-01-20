@@ -207,6 +207,31 @@ namespace IMDF.Feature
         }
     }
 
+    [JsonConverter(typeof(GeoJSONMultiLineString))]
+    public class GeoJSONMultiLineString : GeoJSONGeometry
+    {
+        public List<Point[]> lines;
+
+        public GeoJSONMultiLineString() { }
+
+        public GeoJSONMultiLineString(List<Point[]> lines)
+        {
+            this.lines = lines;
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            GeoJSONMultiLineString line = value as GeoJSONMultiLineString;
+            writer.WriteStartObject();
+            writer.WritePropertyName("type");
+            writer.WriteValue("MultiLineString");
+
+            writer.WritePropertyName("coordinates");
+            serializer.Serialize(writer, line.lines);
+            writer.WriteEndObject();
+        }
+    }
+
     [JsonConverter(typeof(FeatureCollection))]
     public class FeatureCollection : GeoJSONObject
     {
@@ -1032,7 +1057,9 @@ namespace IMDF.Feature
             [EnumMember(Value = "road.pedestrian.main")] roadPedestrianMain,
             grass,
             tree,
-            forest
+            forest,
+            [EnumMember(Value = "fence.main")] fenceMain,
+            [EnumMember(Value = "fence.second")] fenceSecond,
         }
 
         public class Properties
@@ -1124,7 +1151,8 @@ namespace IMDF.Feature
         public enum Category
         {
             [EnumMember(Value = "parking.car")] parkingCar,
-            [EnumMember(Value = "parking.bicycle")] parkingBicycle
+            [EnumMember(Value = "parking.bicycle")] parkingBicycle,
+            banch
         }
 
         public class Properties
@@ -1156,6 +1184,58 @@ namespace IMDF.Feature
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
             base.WriteJson(writer, value, serializer, "enviroment_amenity");
+        }
+    }
+
+    [JsonConverter(typeof(EnviromentDetail))]
+    public class EnviromentDetail : Feature<EnviromentDetail.Properties>
+    {
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum Category
+        {
+            crosswalk,
+            [EnumMember(Value = "road.marking.main")] roadMarkingMain,
+            [EnumMember(Value = "parking.marking")] parkingMarking,
+            [EnumMember(Value = "parking.big")] parkingBig,
+            [EnumMember(Value = "fence.main")] fenceMain
+        }
+
+        public class Properties
+        {
+            public Category category;
+
+            public Properties() { }
+
+            public Properties(IMDF.Crosswalk crosswalk)
+            {
+                category = Category.crosswalk;
+            }
+
+            public Properties(IMDF.DetailLine detailLine)
+            {
+                category = detailLine.category;
+            }
+        }
+
+        public EnviromentDetail() { }
+
+        public EnviromentDetail(IMDF.Crosswalk crosswalk)
+        {
+            identifier = crosswalk.guid;
+            geometry = new GeoJSONMultiLineString(crosswalk.Lines());
+            properties = new Properties(crosswalk);
+        }
+
+        public EnviromentDetail(IMDF.DetailLine detailLine)
+        {
+            identifier = detailLine.guid;
+            geometry = new GeoJSONMultiLineString(detailLine.Lines());
+            properties = new Properties(detailLine);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            base.WriteJson(writer, value, serializer, "enviroment_detail");
         }
     }
 
@@ -1200,13 +1280,16 @@ namespace IMDF.Feature
                 (GameObject.FindObjectsOfType<IMDF.Building>(true).Select(t => Footprint.FootprintFromBuilding(t)).SelectMany(t => t).ToArray(), "footprint"),
                 (GameObject.FindObjectsOfType<IMDF.Venue>(true).Select(t => new Venue(t)).ToArray(), "venue"),
                 (GameObject.FindObjectsOfType<IMDF.Amenity>(true).Select(t => new Amenity(t)).ToArray(), "amenity"),
-                (GameObject.FindObjectsOfType<IMDF.EnviromentUnit>(true).Select(t => new EnviromentUnit(t)).ToArray(), "enviroment"),
-                (GameObject.FindObjectsOfType<IMDF.EnviromentAmenity>(true).Select(t => new EnviromentAmenity(t)).ToArray(), "enviromentAmenity"),
+                (GameObject.FindObjectsOfType<IMDF.EnviromentAmenity>(true).Select(t => new EnviromentAmenity(t)) .ToArray(), "enviromentAmenity"),
                 (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IAddress>()
                     .Where(t => t.address != null)
                     .Select(t => new Address(t.address))
                     .Distinct().ToArray(), "address"),
+                (GameObject.FindObjectsOfType<IMDF.EnviromentUnit>(true).Select(t => new EnviromentUnit(t)).ToArray(), "enviroment"),
                 (GameObject.FindObjectsOfType<IMDF.Attraction>(true).Select(t => new Attraction(t)).ToArray(), "attraction"),
+                (GameObject.FindObjectsOfType<IMDF.Crosswalk>(true).Select(t => new EnviromentDetail(t))
+                    .Concat(GameObject.FindObjectsOfType<IMDF.DetailLine>(true).Select(t => new EnviromentDetail(t)))
+                    .ToArray(), "enviromentDetail"),
             };
 
             var path = EditorUtility.SaveFolderPanel("Save IMDF achive", PlayerPrefs.GetString("IMDF_PATH") ?? "", "IMDF");
