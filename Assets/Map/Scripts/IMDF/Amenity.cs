@@ -6,6 +6,15 @@ namespace IMDF
 {
     public class Amenity : GeometryPoint
     {
+        public enum DetailLevel
+        {
+            alwaysShowBig = 0,
+            alwaysShow = 1,
+            min = 2,
+            hiddenMin = 3,
+            alwaysShowMin = 4
+        }
+
         public Feature.Amenity.CategoryMin category;
         public LocalizedName localizedName;
         public LocalizedName altName;
@@ -18,7 +27,7 @@ namespace IMDF
         public Address address;
 
         [Space]
-        public int detailLevel;
+        public DetailLevel detailLevel;
 
         private void OnDrawGizmos()
         {

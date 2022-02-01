@@ -1022,7 +1022,7 @@ namespace IMDF.Feature
                 alt_name = amenity.altName.IsEmpty() ? amenity.GetComponentInParent<IMDF.Unit>(true).altName.getFeature() : amenity.altName.getFeature();
                 unit_ids = amenity.units.Select(t => t.guid).ToArray();
 
-                detailLevel = amenity.detailLevel;
+                detailLevel = (int)amenity.detailLevel;
                 hours = amenity.hours.OrNull();
                 phone = amenity.phone.OrNull();
                 website = amenity.website.OrNull();
@@ -1052,14 +1052,15 @@ namespace IMDF.Feature
         [JsonConverter(typeof(StringEnumConverter))]
         public enum Category
         {
-            [EnumMember(Value = "road.main")] roadMain,
-            [EnumMember(Value = "road.dirt")] roadDirt,
-            [EnumMember(Value = "road.pedestrian.main")] roadPedestrianMain,
-            grass,
-            tree,
-            forest,
-            [EnumMember(Value = "fence.main")] fenceMain,
-            [EnumMember(Value = "fence.second")] fenceSecond,
+            [EnumMember(Value = "road.main")] roadMain = 0,
+            [EnumMember(Value = "road.dirt")] roadDirt = 1,
+            [EnumMember(Value = "road.pedestrian.main")] roadPedestrianMain = 2,
+            [EnumMember(Value = "road.pedestrian.second")] roadPedestrianSecond = 8,
+            grass = 3,
+            tree = 4,
+            forest = 5,
+            [EnumMember(Value = "fence.main")] fenceMain = 6,
+            [EnumMember(Value = "fence.second")] fenceSecond = 7,
         }
 
         public class Properties
@@ -1168,7 +1169,7 @@ namespace IMDF.Feature
                 category = amenity.category;
                 name = amenity.localizedName.getFeature();
                 alt_name = amenity.altName.getFeature();
-                detailLevel = amenity.detailLevel;
+                detailLevel = (int)amenity.detailLevel;
             }
         }
 
@@ -1197,7 +1198,9 @@ namespace IMDF.Feature
             [EnumMember(Value = "road.marking.main")] roadMarkingMain,
             [EnumMember(Value = "parking.marking")] parkingMarking,
             [EnumMember(Value = "parking.big")] parkingBig,
-            [EnumMember(Value = "fence.main")] fenceMain
+            [EnumMember(Value = "fence.main")] fenceMain,
+            [EnumMember(Value = "fence.heigth")] fenceHeight,
+            steps
         }
 
         public class Properties
@@ -1208,7 +1211,7 @@ namespace IMDF.Feature
 
             public Properties(IMDF.Crosswalk crosswalk)
             {
-                category = Category.crosswalk;
+                category = crosswalk.category;
             }
 
             public Properties(IMDF.DetailLine detailLine)

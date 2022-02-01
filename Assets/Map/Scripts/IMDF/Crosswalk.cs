@@ -13,6 +13,9 @@ namespace IMDF
         public float spacing = 1;
         public float lineWidth = 0.4f;
 
+        [Space]
+        public IMDF.Feature.EnviromentDetail.Category category = IMDF.Feature.EnviromentDetail.Category.crosswalk;
+
         [SerializeField]
         Vector2 offsetPoint = Vector2.up / 2;
 
