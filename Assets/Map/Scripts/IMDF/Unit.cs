@@ -40,7 +40,9 @@ namespace IMDF
             displayPoint = Vector2.zero;
         }
 
-
+        private void OnValidate() {
+            gameObject.name = category.ToString() + "_" + altName.ru;   
+        }
 
         private void OnEnable()
         {

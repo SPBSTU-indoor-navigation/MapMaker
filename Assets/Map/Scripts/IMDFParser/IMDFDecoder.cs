@@ -593,69 +593,74 @@ namespace IMDF.Feature
         [JsonConverter(typeof(StringEnumConverter))]
         public enum Category
         {
-            auditorium,
-            brick,
-            classroom,
-            column,
-            concrete,
-            conferenceroom,
-            drywall,
-            elevator,
-            escalator,
-            fieldofplay,
-            firstaid,
-            fitnessroom,
-            foodservice,
-            footbridge,
-            glass,
-            huddleroom,
-            kitchen,
-            laboratory,
-            library,
-            lobby,
-            lounge,
-            mailroom,
-            mothersroom,
-            movietheater,
-            movingwalkway,
-            nonpublic,
-            office,
-            opentobelow,
-            parking,
-            phoneroom,
-            platform,
-            privatelounge,
-            ramp,
-            recreation,
-            restroom,
-            [EnumMember(Value = "restroom.family")] restroomFamily,
-            [EnumMember(Value = "restroom.female")] restroomFemale,
-            [EnumMember(Value = "restroom.female.wheelchair")] restroomFemaleWheelchair,
-            [EnumMember(Value = "restroom.male")] restroomMale,
-            [EnumMember(Value = "restroom.male.wheelchair")] restroomMaleWheelchair,
-            [EnumMember(Value = "restroom.transgender")] restroomTransgender,
-            [EnumMember(Value = "restroom.transgender.wheelchair")] restroomTransgenderWheelchair,
-            [EnumMember(Value = "restroom.unisex")] restroomUnisex,
-            [EnumMember(Value = "restroom.unisex.wheelchair")] restroomUnisexWheelchair,
-            [EnumMember(Value = "restroom.wheelchair")] restroomWheelchair,
-            road,
-            room,
-            serverroom,
-            shower,
-            smokingarea,
-            stairs,
-            steps,
-            storage,
-            structure,
-            terrace,
-            theater,
-            unenclosedarea,
-            unspecified,
-            vegetation,
-            waitingroom,
-            walkway,
-            [EnumMember(Value = "walkway.island")] walkwayIsland,
-            wood,
+            auditorium = 0,
+            administration = 63,
+            brick = 1,
+            classroom = 2,
+            column = 3,
+            concrete = 4,
+            conferenceroom = 5,
+            drywall = 6,
+            elevator = 7,
+            escalator = 8,
+            fieldofplay = 9,
+            firstaid = 10,
+            fitnessroom = 11,
+            foodservice = 12,
+            [EnumMember(Value = "foodservice.coffee")] foodserviceCoffee = 67,
+            footbridge = 13,
+            glass = 14,
+            huddleroom = 15,
+            kitchen = 16,
+            laboratory = 17,
+            library = 18,
+            lobby = 19,
+            lounge = 20,
+            mailroom = 21,
+            mothersroom = 22,
+            movietheater = 23,
+            movingwalkway = 24,
+            nonpublic = 25,
+            office = 26,
+            opentobelow = 27,
+            parking = 28,
+            phoneroom = 29,
+            platform = 30,
+            privatelounge = 31,
+            ramp = 32,
+            recreation = 33,
+            restroom = 34,
+            [EnumMember(Value = "restroom.family")] restroomFamily = 35,
+            [EnumMember(Value = "restroom.female")] restroomFemale = 36,
+            [EnumMember(Value = "restroom.female.wheelchair")] restroomFemaleWheelchair = 37,
+            [EnumMember(Value = "restroom.male")] restroomMale = 38,
+            [EnumMember(Value = "restroom.male.wheelchair")] restroomMaleWheelchair = 39,
+            [EnumMember(Value = "restroom.transgender")] restroomTransgender = 40,
+            [EnumMember(Value = "restroom.transgender.wheelchair")] restroomTransgenderWheelchair = 41,
+            [EnumMember(Value = "restroom.unisex")] restroomUnisex = 42,
+            [EnumMember(Value = "restroom.unisex.wheelchair")] restroomUnisexWheelchair = 43,
+            [EnumMember(Value = "restroom.wheelchair")] restroomWheelchair = 44,
+            road = 45,
+            room = 46,
+            serverroom = 47,
+            shower = 48,
+            smokingarea = 49,
+            security = 64,
+            shop = 66,
+            stairs = 50,
+            steps = 51,
+            storage = 52,
+            structure = 53,
+            terrace = 54,
+            theater = 55,
+            unenclosedarea = 56,
+            unspecified = 57,
+            vegetation = 58,
+            waitingroom = 59,
+            wardrobe = 65,
+            walkway = 60,
+            [EnumMember(Value = "walkway.island")] walkwayIsland = 61,
+            wood = 62,
         }
 
         public class Properties
@@ -1188,8 +1193,8 @@ namespace IMDF.Feature
         }
     }
 
-    [JsonConverter(typeof(EnviromentDetail))]
-    public class EnviromentDetail : Feature<EnviromentDetail.Properties>
+    [JsonConverter(typeof(Detail))]
+    public class Detail : Feature<Detail.Properties>
     {
         [JsonConverter(typeof(StringEnumConverter))]
         public enum Category
@@ -1200,36 +1205,47 @@ namespace IMDF.Feature
             [EnumMember(Value = "parking.big")] parkingBig,
             [EnumMember(Value = "fence.main")] fenceMain,
             [EnumMember(Value = "fence.heigth")] fenceHeight,
-            steps
+            steps,
+            [EnumMember(Value = "indoor.steps")] indoorSteps,
+            [EnumMember(Value = "indoor.stairs")] indoorStairs
         }
 
         public class Properties
         {
             public Category category;
+            public Guid? level_id;
 
-            public Properties() { }
+            public Properties(FeatureMB feature)
+            {
+                if (feature.GetComponentInParent<IMDF.Level>(true))
+                {
+                    level_id = feature.GetComponentInParent<IMDF.Level>(true).guid;
+                }
+            }
 
-            public Properties(IMDF.Crosswalk crosswalk)
+            public Properties(IMDF.Crosswalk crosswalk) : this(crosswalk as FeatureMB)
             {
                 category = crosswalk.category;
             }
 
-            public Properties(IMDF.DetailLine detailLine)
+            public Properties(IMDF.DetailLine detailLine) : this(detailLine as FeatureMB)
             {
                 category = detailLine.category;
+
+
             }
         }
 
-        public EnviromentDetail() { }
+        public Detail() { }
 
-        public EnviromentDetail(IMDF.Crosswalk crosswalk)
+        public Detail(IMDF.Crosswalk crosswalk)
         {
             identifier = crosswalk.guid;
             geometry = new GeoJSONMultiLineString(crosswalk.Lines());
             properties = new Properties(crosswalk);
         }
 
-        public EnviromentDetail(IMDF.DetailLine detailLine)
+        public Detail(IMDF.DetailLine detailLine)
         {
             identifier = detailLine.guid;
             geometry = new GeoJSONMultiLineString(detailLine.Lines());
@@ -1238,7 +1254,7 @@ namespace IMDF.Feature
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            base.WriteJson(writer, value, serializer, "enviroment_detail");
+            base.WriteJson(writer, value, serializer, "detail");
         }
     }
 
@@ -1290,9 +1306,9 @@ namespace IMDF.Feature
                     .Distinct().ToArray(), "address"),
                 (GameObject.FindObjectsOfType<IMDF.EnviromentUnit>(true).Select(t => new EnviromentUnit(t)).ToArray(), "enviroment"),
                 (GameObject.FindObjectsOfType<IMDF.Attraction>(true).Select(t => new Attraction(t)).ToArray(), "attraction"),
-                (GameObject.FindObjectsOfType<IMDF.Crosswalk>(true).Select(t => new EnviromentDetail(t))
-                    .Concat(GameObject.FindObjectsOfType<IMDF.DetailLine>(true).Select(t => new EnviromentDetail(t)))
-                    .ToArray(), "enviromentDetail"),
+                (GameObject.FindObjectsOfType<IMDF.Crosswalk>(true).Select(t => new Detail(t))
+                    .Concat(GameObject.FindObjectsOfType<IMDF.DetailLine>(true).Select(t => new Detail(t)))
+                    .ToArray(), "detail"),
             };
 
             var path = EditorUtility.SaveFolderPanel("Save IMDF achive", PlayerPrefs.GetString("IMDF_PATH") ?? "", "IMDF");
