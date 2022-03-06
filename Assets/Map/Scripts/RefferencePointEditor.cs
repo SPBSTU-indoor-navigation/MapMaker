@@ -8,6 +8,16 @@ public interface IAddress
     IMDF.Address address { get; }
 }
 
+public interface IOccupant
+{
+    IMDF.Feature.Occupant occupant { get; }
+}
+
+public interface IAnchor
+{
+    IMDF.Feature.Anchor anchor { get; }
+}
+
 public interface IRefferencePoint
 {
     Vector2 displayPoint { get; set; }

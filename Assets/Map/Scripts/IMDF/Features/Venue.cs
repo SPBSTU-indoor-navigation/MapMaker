@@ -15,16 +15,22 @@ namespace IMDF
 
         public Feature.Venue.Category category;
         public Feature.RestrictionCategory restriction = Feature.RestrictionCategory.nullable;
-        public Address address;
+        public AddressContainer address;
 
         [HideInInspector]
         public Vector2 displayPoint { get; set; }
 
-        Address IAddress.address => address;
+        Address IAddress.address => address.address;
 
         private void Start()
         {
             GetComponent<PolygonGeometry>().color = new Color(0.17f, 0.17f, 0.17f);
+        }
+
+        public override void GenerateGUID()
+        {
+            base.GenerateGUID();
+            address.GenerateGUID();
         }
     }
 }

@@ -24,7 +24,7 @@ namespace IMDF
         public string hours;
         public string phone;
         public string website;
-        public Address address;
+        public AddressContainer address;
 
         [Space]
         public DetailLevel detailLevel;

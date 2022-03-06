@@ -392,7 +392,7 @@ namespace IMDF.Feature
                 phone = venue.phone;
                 website = venue.website;
 
-                address_id = venue.address.guid;
+                address_id = venue.address.address.guid;
             }
         }
 
@@ -430,6 +430,7 @@ namespace IMDF.Feature
             public LocalizedName alt_name;
             public Category category;
             public RestrictionCategory restriction;
+            public float rotation;
             public GeoJSONGeometry display_point;
             public Guid? address_id;
 
@@ -441,7 +442,8 @@ namespace IMDF.Feature
 
                 restriction = building.restriction;
                 display_point = RefferencePointEditor.GetGeoJSONPoint(building);
-                address_id = building.addressId?.guid;
+                address_id = building.addressId?.address.guid;
+                rotation = building.rotation;
             }
         }
 
@@ -1031,7 +1033,7 @@ namespace IMDF.Feature
                 hours = amenity.hours.OrNull();
                 phone = amenity.phone.OrNull();
                 website = amenity.website.OrNull();
-                address_id = amenity.address ? amenity.address.guid : null;
+                address_id = amenity.address ? amenity.address.address.guid : null;
 
             }
         }
@@ -1048,6 +1050,119 @@ namespace IMDF.Feature
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
             base.WriteJson(writer, value, serializer, "amenity");
+        }
+    }
+
+    [JsonConverter(typeof(Anchor))]
+    public class Anchor : Feature<Anchor.Properties>
+    {
+        public class Properties
+        {
+            public Guid unit_id;
+            public Guid? address_id;
+
+            public Properties() { }
+
+            public Properties(Guid unit_id, Guid? address_id)
+            {
+                this.unit_id = unit_id;
+                this.address_id = address_id;
+            }
+        }
+
+        public Anchor() { }
+
+        public Anchor(IMDF.Unit unit)
+        {
+            identifier = unit.anchorGuid;
+            geometry = RefferencePointEditor.GetGeoJSONPoint(unit);
+            properties = new Properties(unit.guid, (unit as IAddress).address?.guid);
+        }
+
+        public Anchor(IMDF.Occupant occupant)
+        {
+            identifier = occupant.anchorGuid;
+            geometry = new IMDF.Feature.GeoJSONPoint(GeoMap.CalculateGeo(occupant.transform.position).GetPoint());
+            properties = new Properties(occupant.GetComponentInParent<IMDF.Unit>().guid, (occupant as IAddress).address?.guid);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            base.WriteJson(writer, value, serializer, "anchor");
+        }
+    }
+
+    [JsonConverter(typeof(Occupant))]
+    public class Occupant : Feature<Occupant.Properties>
+    {
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum Category
+        {
+            auditorium = 0,
+            administration = 1,
+            classroom = 2,
+            laboratory = 3,
+            library = 4,
+            souvenirs = 5,
+            cafe = 6,
+            security = 7,
+            wardrobe = 8,
+
+            unspecified = 10000,
+        }
+
+        public class Properties
+        {
+            public LocalizedName name;
+            public LocalizedName shortName;
+            public Category category;
+            public Guid anchor_id;
+            public string hours = null;
+            public string phone = null;
+            public string website = null;
+            public Guid? correlation_id;
+
+            public Properties() { }
+
+            public Properties(IMDF.Occupant occupant)
+            {
+                name = occupant.fullName.getFeature();
+                shortName = occupant.shortName.getFeature();
+                anchor_id = (occupant as IAnchor).anchor.identifier;
+                category = occupant.category;
+                hours = occupant.hours.OrNull();
+                phone = occupant.phone.OrNull();
+                website = occupant.website.OrNull();
+            }
+
+            public Properties(IMDF.Unit unit)
+            {
+                name = unit.localizedName.getFeature();
+                shortName = unit.altName.getFeature();
+                anchor_id = (unit as IAnchor).anchor.identifier;
+                category = unit.occupantCategory;
+            }
+        }
+
+        public Occupant() { }
+
+        public Occupant(IMDF.Occupant occupant)
+        {
+            identifier = occupant.guid;
+            geometry = null;
+            properties = new Properties(occupant);
+        }
+
+        public Occupant(IMDF.Unit unit)
+        {
+            identifier = unit.occupantGuid;
+            geometry = null;
+            properties = new Properties(unit);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            base.WriteJson(writer, value, serializer, "occupant");
         }
     }
 
@@ -1302,8 +1417,12 @@ namespace IMDF.Feature
                 (GameObject.FindObjectsOfType<IMDF.EnviromentAmenity>(true).Select(t => new EnviromentAmenity(t)) .ToArray(), "enviromentAmenity"),
                 (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IAddress>()
                     .Where(t => t.address != null)
-                    .Select(t => new Address(t.address))
-                    .Distinct().ToArray(), "address"),
+                    .Select(t => t.address)
+                    .Distinct()
+                    .Select(t => new Address(t))
+                    .ToArray(), "address"),
+                (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IAnchor>().Select(t => t.anchor).ToArray(), "anchor"),
+                (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IOccupant>().Select(t => t.occupant).Where(t => t != null).ToArray(), "occupant"),
                 (GameObject.FindObjectsOfType<IMDF.EnviromentUnit>(true).Select(t => new EnviromentUnit(t)).ToArray(), "enviroment"),
                 (GameObject.FindObjectsOfType<IMDF.Attraction>(true).Select(t => new Attraction(t)).ToArray(), "attraction"),
                 (GameObject.FindObjectsOfType<IMDF.Crosswalk>(true).Select(t => new Detail(t))

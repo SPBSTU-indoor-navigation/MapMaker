@@ -266,9 +266,10 @@ MonoBehaviour:
   altName:
     ru: 
     en: 
-  addressId: {fileID: 0}
+  addressId: {fileID: 11400000, guid: 3a79d895c5ca846c4b51fc59beb39358, type: 2}
   category: 4
   restriction: 2
+  rotation: 18.888
   showDisplayPoint: 1
   displayPoint_: {x: 0, y: 0}
   aerial: {fileID: 0}

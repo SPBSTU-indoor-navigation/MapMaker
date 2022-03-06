@@ -6,7 +6,7 @@ using UnityEngine;
 namespace IMDF
 {
     [RequireComponent(typeof(RefferencePointEditor))]
-    public class Unit : GeometryPolygon, IRefferencePoint
+    public class Unit : GeometryPolygon, IRefferencePoint, IAddress, IAnchor, IOccupant
     {
 
         public LocalizedName localizedName;
@@ -15,7 +15,12 @@ namespace IMDF
         public Feature.RestrictionCategory restriction = Feature.RestrictionCategory.nullable;
 
         public bool showDisplayPoint = true;
+        public AddressContainer address;
 
+        [Space]
+        [Header("Occupant")]
+        public bool generateOccupant = true;
+        public Feature.Occupant.Category occupantCategory = Feature.Occupant.Category.unspecified;
 
         [HideInInspector, SerializeField]
         Vector2 displayPoint_ = Vector2.zero;
@@ -34,14 +39,50 @@ namespace IMDF
 
         bool IRefferencePoint.showDisplayPoint => showDisplayPoint;
 
+
+        Address IAddress.address
+        {
+            get
+            {
+                if (address) return address.address;
+
+                if (GetComponentInParent<Building>(true).addressId)
+                {
+                    var address = new Address(addresGuid, GetComponentInParent<Building>(true).addressId.address);
+                    address.unit = localizedName.ru;
+                    return address;
+                }
+
+                return null;
+            }
+        }
+
+        Feature.Anchor IAnchor.anchor => new Feature.Anchor(this);
+
+        Feature.Occupant IOccupant.occupant
+        {
+            get
+            {
+                if (altName.getFeature() != null && generateOccupant)
+                {
+                    return new Feature.Occupant(this);
+                }
+                return null;
+            }
+        }
+
+        public System.Guid anchorGuid, addresGuid, occupantGuid;
+
+
         public void NewObj()
         {
             GetComponent<PolygonGeometry>().color = new Color(Random.Range(0.17f, 0.4f), 0.17f, 0.4f);
             displayPoint = Vector2.zero;
         }
 
-        private void OnValidate() {
-            gameObject.name = category.ToString() + "_" + altName.ru;   
+        private void OnValidate()
+        {
+            gameObject.name = category.ToString() + "_" + altName.ru;
         }
 
         private void OnEnable()
@@ -70,6 +111,15 @@ namespace IMDF
             Handles.EndGUI();
 
         }
+
+        public override void GenerateGUID()
+        {
+            base.GenerateGUID();
+            anchorGuid = System.Guid.NewGuid();
+            addresGuid = System.Guid.NewGuid();
+            occupantGuid = System.Guid.NewGuid();
+        }
+
 
     }
 }

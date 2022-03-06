@@ -32197,7 +32197,7 @@ MonoBehaviour:
   website: https://www.spbstu.ru
   category: 20
   restriction: 2
-  address: {fileID: 11400000, guid: 61010c735f563440b9ec3bbefcbd743e, type: 2}
+  address: {fileID: 11400000, guid: 61443800c17c14aaea1eb01cb397d7ce, type: 2}
 --- !u!1 &6119955679783169691
 GameObject:
   m_ObjectHideFlags: 0

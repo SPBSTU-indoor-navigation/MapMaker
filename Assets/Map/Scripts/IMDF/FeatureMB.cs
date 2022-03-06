@@ -10,7 +10,7 @@ namespace IMDF
     {
         public System.Guid guid;
 
-        public void GenerateGUID()
+        public virtual void GenerateGUID()
         {
             guid = System.Guid.NewGuid();
         }
