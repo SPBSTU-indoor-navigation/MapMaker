@@ -1083,7 +1083,7 @@ namespace IMDF.Feature
         {
             identifier = occupant.anchorGuid;
             geometry = new IMDF.Feature.GeoJSONPoint(GeoMap.CalculateGeo(occupant.transform.position).GetPoint());
-            properties = new Properties(occupant.GetComponentInParent<IMDF.Unit>().guid, (occupant as IAddress).address?.guid);
+            properties = new Properties(occupant.GetComponentInParent<IMDF.Unit>(true).guid, (occupant as IAddress).address?.guid);
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
@@ -1104,9 +1104,12 @@ namespace IMDF.Feature
             laboratory = 3,
             library = 4,
             souvenirs = 5,
-            cafe = 6,
+            [EnumMember(Value = "foodservice.coffee")] foodserviceCoffee = 6,
             security = 7,
             wardrobe = 8,
+            restroom = 9,
+            [EnumMember(Value = "restroom.female")] restroomFemale = 10,
+            [EnumMember(Value = "restroom.male")] restroomMale = 11,
 
             unspecified = 10000,
         }
@@ -1119,6 +1122,7 @@ namespace IMDF.Feature
             public Guid anchor_id;
             public string hours = null;
             public string phone = null;
+            public string email = null;
             public string website = null;
             public Guid? correlation_id;
 
@@ -1133,6 +1137,7 @@ namespace IMDF.Feature
                 hours = occupant.hours.OrNull();
                 phone = occupant.phone.OrNull();
                 website = occupant.website.OrNull();
+                email = occupant.email.OrNull();
             }
 
             public Properties(IMDF.Unit unit)
@@ -1373,6 +1378,69 @@ namespace IMDF.Feature
         }
     }
 
+    [JsonConverter(typeof(NavPath))]
+    public class NavPath : Feature<NavPath.Properties>
+    {
+        public class Properties
+        {
+            public Guid? level_id;
+            public Guid? builing_id;
+            public Guid[] neighbours;
+
+            public Properties(PathNode node)
+            {
+                this.neighbours = node.neighbors.Select(t => t.guid).ToArray();
+                level_id = node.GetComponentInParent<IMDF.Level>(true)?.guid;
+                builing_id = node.GetComponentInParent<IMDF.Building>(true)?.guid;
+            }
+        }
+
+        public NavPath() { }
+
+        public NavPath(PathNode node)
+        {
+            identifier = node.guid;
+            geometry = new GeoJSONPoint(node.GetPoint());
+            properties = new Properties(node);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            base.WriteJson(writer, value, serializer, "navPath");
+        }
+
+    }
+
+    [JsonConverter(typeof(NavPathAssocieted))]
+    public class NavPathAssocieted : Feature<NavPathAssocieted.Properties>
+    {
+        public class Properties
+        {
+            public Guid pathNode_id;
+            public Guid associeted_id;
+
+            public Properties(Guid node, Guid associeted)
+            {
+                this.pathNode_id = node;
+                this.associeted_id = associeted;
+            }
+        }
+
+        public NavPathAssocieted() { }
+
+        public NavPathAssocieted(Guid associeted, PathNode node)
+        {
+            identifier = Guid.NewGuid();
+            geometry = null;
+            properties = new Properties(node.guid, associeted);
+        }
+
+        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            base.WriteJson(writer, value, serializer, "navPathAssocieted");
+        }
+    }
+
 
     public class Manifest
     {
@@ -1401,10 +1469,29 @@ namespace IMDF.Feature
 
     public class IMDFDecoder
     {
+        public static Dictionary<FeatureMB, Occupant> iOccupants = new Dictionary<FeatureMB, Occupant>();
         public static void Ser()
         {
             var features = GameObject.FindObjectsOfType<FeatureMB>(true);
             foreach (var feature in features) feature.GenerateGUID();
+
+            var pathNodes = GameObject.FindObjectsOfType<PathNode>(true);
+            foreach (var node in pathNodes) node.Fix();
+
+            iOccupants = GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IOccupant>()
+                                    .ToDictionary(t => t as FeatureMB, t => t.occupant)
+                                    .Where(t => t.Value != null)
+                                    .ToDictionary(t => t.Key, t => t.Value);
+
+
+            List<GeoJSONObject> associetedPath = new List<GeoJSONObject>();
+            foreach (var node in pathNodes)
+            {
+                foreach (var item in node.associatedFeatures)
+                {
+                    associetedPath.Add(new NavPathAssocieted(iOccupants.ContainsKey(item) ? IMDFDecoder.iOccupants[item].identifier : item.guid, node));
+                }
+            }
 
             var featuresType = new (GeoJSONObject[], string)[] {
                 (GameObject.FindObjectsOfType<IMDF.Opening>(true).Select(t => new Opening(t)).ToArray(), "opening"),
@@ -1422,12 +1509,14 @@ namespace IMDF.Feature
                     .Select(t => new Address(t))
                     .ToArray(), "address"),
                 (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IAnchor>().Select(t => t.anchor).ToArray(), "anchor"),
-                (GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IOccupant>().Select(t => t.occupant).Where(t => t != null).ToArray(), "occupant"),
+                (iOccupants.Values.ToArray(), "occupant"),
                 (GameObject.FindObjectsOfType<IMDF.EnviromentUnit>(true).Select(t => new EnviromentUnit(t)).ToArray(), "enviroment"),
                 (GameObject.FindObjectsOfType<IMDF.Attraction>(true).Select(t => new Attraction(t)).ToArray(), "attraction"),
                 (GameObject.FindObjectsOfType<IMDF.Crosswalk>(true).Select(t => new Detail(t))
                     .Concat(GameObject.FindObjectsOfType<IMDF.DetailLine>(true).Select(t => new Detail(t)))
                     .ToArray(), "detail"),
+                (pathNodes.Select(t => new NavPath(t)).ToArray(), "navPath"),
+                (associetedPath.ToArray(), "navPathAssocieted"),
             };
 
             var path = EditorUtility.SaveFolderPanel("Save IMDF achive", PlayerPrefs.GetString("IMDF_PATH") ?? "", "IMDF");

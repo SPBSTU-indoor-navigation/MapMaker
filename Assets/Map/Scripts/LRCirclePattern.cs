@@ -8,12 +8,13 @@ public class LRCirclePattern : MonoBehaviour
 {
     LineRenderer lr;
 
-    public float radius, start, end = 360;
-    public int count;
+    public float radius = 5, start, end = 360;
+    public int count = 20;
 
     void Start()
     {
         lr = GetComponent<LineRenderer>();
+        lr.useWorldSpace = false;
     }
 
     private void OnValidate()

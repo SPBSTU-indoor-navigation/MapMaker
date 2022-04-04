@@ -13,6 +13,7 @@ namespace IMDF
         public AddressContainer address;
         public string hours;
         public string phone;
+        public string email;
         public string website;
 
         Feature.Anchor IAnchor.anchor => new Feature.Anchor(this);

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 209df99bedbe14237af9435b24f9e06b, type: 3}
-  m_Name: Occupant
+  m_Name: GZ_Cafe
   m_EditorClassIdentifier: 
   address:
     address: "\u0443\u043B. \u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F,
