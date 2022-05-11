@@ -14,7 +14,7 @@ public class PathNode : IMDF.GeometryPoint
     {
         Gizmos.color = Selection.gameObjects.Contains(gameObject) ? Color.blue : Color.yellow;
         Handles.color = Gizmos.color;
-        Gizmos.DrawSphere(transform.position, 1f);
+        Gizmos.DrawSphere(transform.position, 0.1f);
         Handles.DrawSolidDisc(transform.position, Vector3.forward, 0.6f);
     }
 

@@ -294,7 +294,8 @@ public class PathEditorOverlay : Overlay
         if (TryGetMousePos(out Vector3 point))
         {
             var nodes = FindObjectsOfType<PathNode>();
-            return nodes.OrderBy(t => (t.transform.position - point).sqrMagnitudeXY())
+            return nodes.Where(t => t.isActiveAndEnabled)
+                        .OrderBy(t => (t.transform.position - point).sqrMagnitudeXY())
                         .Where(t => (t.transform.position - point).sqrMagnitudeXY() < distance)
                         .FirstOrDefault();
         }
@@ -312,7 +313,7 @@ public class PathEditorOverlay : Overlay
                                         .Concat(FindObjectsOfType<MonoBehaviour>()
                                                 .Where(t => t.isActiveAndEnabled)
                                                 .OfType<IOccupant>()
-                                                .Where(t => t.occupant != null)
+                                                .Where(t => t.hasOccupant)
                                                 .Select(t => t as IMDF.FeatureMB)
                                                 );
             return fratures.OrderBy(t => (t.transform.position - point).sqrMagnitudeXY())

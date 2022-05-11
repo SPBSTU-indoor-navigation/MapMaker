@@ -16,6 +16,7 @@ namespace IMDF
         public Feature.Venue.Category category;
         public Feature.RestrictionCategory restriction = Feature.RestrictionCategory.nullable;
         public AddressContainer address;
+        public FeatureMB defaultPathBegin;
 
         [HideInInspector]
         public Vector2 displayPoint { get; set; }

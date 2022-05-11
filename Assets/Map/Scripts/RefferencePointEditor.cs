@@ -11,6 +11,7 @@ public interface IAddress
 public interface IOccupant
 {
     IMDF.Feature.Occupant occupant { get; }
+    bool hasOccupant { get; }
 }
 
 public interface IAnchor

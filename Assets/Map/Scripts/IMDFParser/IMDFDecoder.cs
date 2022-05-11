@@ -380,6 +380,7 @@ namespace IMDF.Feature
             public string website;
 
             public Guid address_id;
+            public Guid? navpath_begin_id;
 
             public Properties(IMDF.Venue venue)
             {
@@ -393,6 +394,7 @@ namespace IMDF.Feature
                 website = venue.website;
 
                 address_id = venue.address.address.guid;
+                navpath_begin_id = venue.defaultPathBegin.guid;
             }
         }
 

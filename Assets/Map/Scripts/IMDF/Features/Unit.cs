@@ -57,13 +57,15 @@ namespace IMDF
             }
         }
 
+        public bool hasOccupant => altName.getFeature() != null && generateOccupant;
+
         Feature.Anchor IAnchor.anchor => new Feature.Anchor(this);
 
         Feature.Occupant IOccupant.occupant
         {
             get
             {
-                if (altName.getFeature() != null && generateOccupant)
+                if (hasOccupant)
                 {
                     return new Feature.Occupant(this);
                 }

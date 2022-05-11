@@ -20,6 +20,8 @@ namespace IMDF
 
         Address IAddress.address => address ? address.address : (GetComponentInParent<Unit>(true) as IAddress).address;
 
+        public bool hasOccupant => true;
+
         Feature.Occupant IOccupant.occupant => new Feature.Occupant(this);
 
         [HideInInspector] public System.Guid anchorGuid;
