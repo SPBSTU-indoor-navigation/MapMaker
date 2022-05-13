@@ -79,7 +79,16 @@ public class ColliderToMesh : MonoBehaviour
         for (var i = 0; i < t.Length; i++)
         {
             if (t.Length != lastPoints.Length || t[i] != lastPoints[i])
-                Snap(ref t[i]);
+            {
+                if (!transform.GetComponent<LR2Polygon>())
+                {
+                    Snap(ref t[i]);
+                }
+                else
+                {
+                    Debug.Log(transform.GetComponent<LR2Polygon>());
+                }
+            }
         }
 
         lastPoints = t;

@@ -221,6 +221,62 @@ public class IMDFEditorWindow : EditorWindow
 
         if (GUILayout.Button("Create Opening")) CreateOpening();
 
+        if (GUILayout.Button("Rescale"))
+        {
+            var transform = Selection.transforms[0];
+
+            var scale = transform.localScale;
+
+            Undo.RecordObject(transform, "rescale");
+            foreach (var line in transform.GetComponentsInChildren<LineRenderer>())
+            {
+                Undo.RecordObject(line, "rescale");
+                Undo.RecordObject(line.transform, "rescale");
+                // line.SetPosition(0, line.transform.InverseTransformPoint(Vector3.zero));
+
+                Vector3[] newPoints = new Vector3[line.positionCount];
+                line.GetPositions(newPoints);
+
+                var globalPoints = newPoints
+                    .Select(t => line.transform.TransformPoint(t))
+                    .Select(t => new Vector3(t.x * scale.x, t.y * scale.y, t.z * scale.z))
+                    .Select(t => line.transform.InverseTransformPoint(t));
+
+                line.SetPositions(globalPoints.ToArray());
+            }
+
+
+            var polygons = transform.GetComponentsInChildren<PolygonGeometry>().Select(t => t.GetComponent<PolygonCollider2D>()).ToArray();
+            foreach (var polygon in polygons)
+            {
+                Undo.RecordObject(polygon, "rescale");
+
+                polygon.points = polygon.points
+                    .Select(t => polygon.transform.TransformPoint(t))
+                    .Select(t => new Vector2(t.x * scale.x, t.y * scale.y))
+                    .Select(t => polygon.transform.InverseTransformPoint(t))
+                    .Select(t => new Vector2(t.x, t.y)).ToArray();
+            }
+
+
+
+            transform.localScale = Vector3.one;
+
+
+            foreach (var line in transform.GetComponentsInChildren<LineRenderer>())
+            {
+                Vector3 delta = line.transform.position - line.GetPosition(0);
+                Vector3[] newPoints = new Vector3[line.positionCount];
+                line.GetPositions(newPoints);
+
+                var globalPoints = newPoints
+                    .Select(t => t + delta);
+
+                line.SetPositions(globalPoints.ToArray());
+                line.transform.position -= delta;
+            }
+        }
+
 
         GUILayout.FlexibleSpace();
         GUILayout.Label("Geojson", EditorStyles.boldLabel);

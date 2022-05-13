@@ -90,7 +90,10 @@ public class PolygonGeometry : MonoBehaviour
                     {
                         if (lastPoints[item][i].Length == t.Length && t[k] != lastPoints[item][i][k])
                         {
-                            Snap(ref t[k]);
+                            if(!GetComponent<LR2Polygon>()) {
+                                Snap(ref t[k]);
+                            }
+                            // Snap(ref t[k]);
                         }
 
                     }

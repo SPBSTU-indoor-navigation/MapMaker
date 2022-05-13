@@ -14,10 +14,11 @@ using UnityEditor.SceneManagement;
 public class PathEditorOverlay : Overlay
 {
     ToggleExample lineToggle;
+    ToggleExample enableToggle;
     public override VisualElement CreatePanelContent()
     {
         lineToggle = new ToggleExample();
-        var enableToggle = new ToggleExample();
+        enableToggle = new ToggleExample();
         enableToggle.onToggle += (bool value) =>
         {
             if (value)
@@ -48,6 +49,7 @@ public class PathEditorOverlay : Overlay
     Vector2 lastMousePosRender = Vector2.zero;
     void OnSceneGUI(SceneView sceneView)
     {
+        if (!enableToggle.value) return;
 
         Event e = Event.current;
 
