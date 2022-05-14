@@ -41,7 +41,7 @@ namespace IMDF
 
         void Start()
         {
-            GetComponent<PolygonGeometry>().color = new Color(0.33f, 0.33f, 0.33f);
+            // GetComponent<PolygonGeometry>().color = new Color(0.33f, 0.33f, 0.33f);
         }
 
         public override void GenerateGUID()
