@@ -69,6 +69,7 @@ public class PolygonGeometry : MonoBehaviour
 
         polygons = GetComponents<PolygonCollider2D>();
         List<CombineInstance> combines = new List<CombineInstance>();
+
         foreach (var item in polygons)
         {
             if (lastPoints.TryGetValue(item, out List<Vector2[]> paths))
@@ -90,7 +91,8 @@ public class PolygonGeometry : MonoBehaviour
                     {
                         if (lastPoints[item][i].Length == t.Length && t[k] != lastPoints[item][i][k])
                         {
-                            if(!GetComponent<LR2Polygon>()) {
+                            if (!GetComponent<LR2Polygon>())
+                            {
                                 Snap(ref t[k]);
                             }
                             // Snap(ref t[k]);
@@ -134,8 +136,16 @@ public class PolygonGeometry : MonoBehaviour
             combines.Add(comb);
         }
 
-        GetComponent<MeshFilter>().sharedMesh = new Mesh();
-        GetComponent<MeshFilter>().sharedMesh.CombineMeshes(combines.ToArray());
+        var result = new Mesh();
+        result.CombineMeshes(combines.ToArray());
+
+        DestroyImmediate(GetComponent<MeshFilter>().sharedMesh);
+        GetComponent<MeshFilter>().sharedMesh = result;
+
+        foreach (var item in combines)
+        {
+            DestroyImmediate(item.mesh);
+        }
     }
 
     [CustomEditor(typeof(PolygonGeometry))]

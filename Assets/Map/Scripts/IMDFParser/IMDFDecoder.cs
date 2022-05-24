@@ -1029,7 +1029,15 @@ namespace IMDF.Feature
                 category = amenity.category;
                 name = amenity.localizedName.IsEmpty() ? amenity.GetComponentInParent<IMDF.Unit>(true).localizedName.getFeature() : amenity.localizedName.getFeature();
                 alt_name = amenity.altName.IsEmpty() ? amenity.GetComponentInParent<IMDF.Unit>(true).altName.getFeature() : amenity.altName.getFeature();
-                unit_ids = amenity.units.Select(t => t.guid).ToArray();
+
+                if (amenity.units.Length == 0)
+                {
+                    unit_ids = new Guid[] { amenity.GetComponentInParent<IMDF.Unit>(true).guid };
+                }
+                else
+                {
+                    unit_ids = amenity.units.Select(t => t.guid).ToArray();
+                }
 
                 detailLevel = (int)amenity.detailLevel;
                 hours = amenity.hours.OrNull();
