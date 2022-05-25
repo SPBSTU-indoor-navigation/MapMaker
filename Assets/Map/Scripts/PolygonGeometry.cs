@@ -65,10 +65,10 @@ public class PolygonGeometry : MonoBehaviour
 
     private void Update()
     {
-        isDirty = true;
-
         polygons = GetComponents<PolygonCollider2D>();
         List<CombineInstance> combines = new List<CombineInstance>();
+
+        bool changed = GetComponent<MeshFilter>().sharedMesh == null;
 
         foreach (var item in polygons)
         {
@@ -76,6 +76,7 @@ public class PolygonGeometry : MonoBehaviour
             {
                 if (lastPoints[item].Count != item.pathCount)
                 {
+                    changed = true;
                     lastPoints[item] = new List<Vector2[]>();
                     for (int i = 0; i < item.pathCount; i++)
                     {
@@ -91,61 +92,77 @@ public class PolygonGeometry : MonoBehaviour
                     {
                         if (lastPoints[item][i].Length == t.Length && t[k] != lastPoints[item][i][k])
                         {
+                            changed = true;
                             if (!GetComponent<LR2Polygon>())
                             {
                                 Snap(ref t[k]);
                             }
-                            // Snap(ref t[k]);
                         }
 
                     }
+
                     lastPoints[item][i] = t;
-                    item.SetPath(i, t);
+                    if (changed)
+                    {
+                        item.SetPath(i, t);
+                    }
                 }
             }
             else
             {
                 lastPoints.Add(item, new List<Vector2[]>());
+                changed = true;
             }
-
-
-
-            Mesh m = item.CreateMesh(true, true);
-
-            Vector3[] vert = m.vertices;
-
-            for (var i = 0; i < vert.Length; i++)
-            {
-                vert[i] = Quaternion.Inverse(transform.rotation) * (vert[i] - transform.position) + Vector3.back * (order + additionalOrder);
-            }
-
-            Color[] c = new Color[vert.Length];
-            for (var i = 0; i < c.Length; i++)
-            {
-                c[i] = color;
-            }
-
-            m.SetVertices(vert);
-            m.SetColors(c);
-
-            m.RecalculateNormals();
-            m.RecalculateBounds();
-            var comb = new CombineInstance();
-            comb.mesh = m;
-            comb.transform = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0, 0, 0), Vector3.one);
-            combines.Add(comb);
         }
 
-        var result = new Mesh();
-        result.CombineMeshes(combines.ToArray());
 
-        DestroyImmediate(GetComponent<MeshFilter>().sharedMesh);
-        GetComponent<MeshFilter>().sharedMesh = result;
-
-        foreach (var item in combines)
+        if (changed || isDirty)
         {
-            DestroyImmediate(item.mesh);
+            isDirty = false;
+            foreach (var item in polygons)
+            {
+                Mesh m = item.CreateMesh(true, true);
+
+                Vector3[] vert = m.vertices;
+
+                for (var i = 0; i < vert.Length; i++)
+                {
+                    vert[i] = Quaternion.Inverse(transform.rotation) * (vert[i] - transform.position) + Vector3.back * (order + additionalOrder);
+                }
+
+                Color[] c = new Color[vert.Length];
+                for (var i = 0; i < c.Length; i++)
+                {
+                    c[i] = color;
+                }
+
+                m.SetVertices(vert);
+                m.SetColors(c);
+
+                m.RecalculateNormals();
+                m.RecalculateBounds();
+                var comb = new CombineInstance();
+                comb.mesh = m;
+                comb.transform = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0, 0, 0), Vector3.one);
+                combines.Add(comb);
+            }
+
+            var result = new Mesh();
+            result.CombineMeshes(combines.ToArray());
+
+            DestroyImmediate(GetComponent<MeshFilter>().sharedMesh);
+            GetComponent<MeshFilter>().sharedMesh = result;
+
+            foreach (var item in combines)
+            {
+                DestroyImmediate(item.mesh);
+            }
         }
+    }
+
+    private void OnValidate()
+    {
+        isDirty = true;
     }
 
     [CustomEditor(typeof(PolygonGeometry))]
