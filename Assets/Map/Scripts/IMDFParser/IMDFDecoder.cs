@@ -1191,9 +1191,13 @@ namespace IMDF.Feature
             [EnumMember(Value = "road.dirt")] roadDirt = 1,
             [EnumMember(Value = "road.pedestrian.main")] roadPedestrianMain = 2,
             [EnumMember(Value = "road.pedestrian.second")] roadPedestrianSecond = 8,
+            [EnumMember(Value = "road.pedestrian.treadmill")] roadPedestrianTreadmill = 9,
             grass = 3,
+            [EnumMember(Value = "grass.stadion")] grassStadion = 10,
             tree = 4,
             forest = 5,
+            sand = 11,
+            water = 12,
             [EnumMember(Value = "fence.main")] fenceMain = 6,
             [EnumMember(Value = "fence.second")] fenceSecond = 7,
         }
@@ -1329,15 +1333,17 @@ namespace IMDF.Feature
         [JsonConverter(typeof(StringEnumConverter))]
         public enum Category
         {
-            crosswalk,
-            [EnumMember(Value = "road.marking.main")] roadMarkingMain,
-            [EnumMember(Value = "parking.marking")] parkingMarking,
-            [EnumMember(Value = "parking.big")] parkingBig,
-            [EnumMember(Value = "fence.main")] fenceMain,
-            [EnumMember(Value = "fence.heigth")] fenceHeight,
-            steps,
-            [EnumMember(Value = "indoor.steps")] indoorSteps,
-            [EnumMember(Value = "indoor.stairs")] indoorStairs
+            crosswalk = 0,
+            [EnumMember(Value = "road.marking.main")] roadMarkingMain = 1,
+            [EnumMember(Value = "parking.marking")] parkingMarking = 2,
+            [EnumMember(Value = "parking.big")] parkingBig = 3,
+            [EnumMember(Value = "stadion.grass.marking")] stadionGrassMarking = 9,
+            [EnumMember(Value = "treadmill.marking")] treadmillMarking = 10,
+            [EnumMember(Value = "fence.main")] fenceMain = 4,
+            [EnumMember(Value = "fence.heigth")] fenceHeight = 5,
+            steps = 6,
+            [EnumMember(Value = "indoor.steps")] indoorSteps = 7,
+            [EnumMember(Value = "indoor.stairs")] indoorStairs = 8
         }
 
         public class Properties
