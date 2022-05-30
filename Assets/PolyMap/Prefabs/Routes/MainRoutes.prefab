@@ -4358,10 +4358,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 3.7846255, y: -0.053232744}
-      - {x: 1.7478976, y: -144.8567}
-      - {x: -5.8213534, y: -144.75023}
-      - {x: -3.7846255, y: 0.053232744}
+    - - {x: 3.6855297, y: 41.65337}
+      - {x: 1.7480679, y: -144.84279}
+      - {x: -5.8215237, y: -144.76414}
+      - {x: -3.8840618, y: 41.732006}
 --- !u!114 &3366121344044398291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4439,7 +4439,7 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: -5}
+  - {x: -0.09926605, y: 41.692688, z: -5}
   - {x: -2.036728, y: -144.80347, z: -5}
   m_Parameters:
     serializedVersion: 3

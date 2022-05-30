@@ -12,10 +12,23 @@ public class PathNode : IMDF.GeometryPoint
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Selection.gameObjects.Contains(gameObject) ? Color.blue : Color.yellow;
-        Handles.color = Gizmos.color;
-        Gizmos.DrawSphere(transform.position, 0.1f);
-        Handles.DrawSolidDisc(transform.position, Vector3.forward, 0.6f);
+        // Gizmos.color = Selection.gameObjects.Contains(gameObject) ? Color.blue : Color.yellow;
+        // Handles.color = Gizmos.color;
+        // Gizmos.DrawSphere(transform.position, 0.1f);
+        // Handles.DrawSolidDisc(transform.position, Vector3.forward, 0.6f);
+
+        // neighbors = neighbors.Where(t => t != null).ToList();
+        // Gizmos.color = Color.yellow;
+        // foreach (var neighbors in neighbors)
+        // {
+        //     Gizmos.DrawLine(transform.position, neighbors.transform.position);
+        // }
+
+        // Gizmos.color = Color.gray;
+        // foreach (var associeted in associatedFeatures)
+        // {
+        //     Gizmos.DrawLine(transform.position, associeted.transform.position);
+        // }
     }
 
     public void Connect(PathNode node, bool biDirectinal = true)

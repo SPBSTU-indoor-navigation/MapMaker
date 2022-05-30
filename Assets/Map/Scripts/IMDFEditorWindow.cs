@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEditor;
 using System.Linq;
 using IMDF.Feature;
+using UnityEditor.SceneManagement;
 
 public class IMDFEditorWindow : EditorWindow
 {
     public static float snapping;
+    Transform parentPath;
 
     // Add menu named "My Window" to the Window menu
     [MenuItem("IMDF/Controll window")]
@@ -277,6 +279,41 @@ public class IMDFEditorWindow : EditorWindow
             }
         }
 
+        GUILayout.Space(40);
+        parentPath = EditorGUILayout.ObjectField("root", parentPath, typeof(Transform), true) as Transform;
+        if (GUILayout.Button("LR2PathNode"))
+        {
+            if (parentPath)
+            {
+                foreach (var item in Selection.gameObjects)
+                {
+                    var lr = item.GetComponentsInChildren<LineRenderer>(true);
+                    PathNode last = null;
+                    foreach (var line in lr)
+                    {
+                        var linePoints = new Vector3[line.positionCount];
+                        line.GetPositions(linePoints);
+                        for (var i = 0; i < linePoints.Length; i++)
+                        {
+                            var node = new GameObject($"Node_{line.gameObject.name}_{i}").AddComponent<PathNode>();
+                            StageUtility.PlaceGameObjectInCurrentStage(node.gameObject);
+                            // go.transform.parent = parent;
+                            node.transform.SetParent(parentPath);
+                            node.transform.position = line.transform.TransformPoint(linePoints[i]);
+                            if (last)
+                            {
+                                last.neighbors.Add(node);
+                                node.neighbors.Add(last);
+                            }
+                            last = node;
+
+                            Debug.Log($"Node_{line.gameObject.name}_{i}");
+                            Undo.RegisterCreatedObjectUndo(node.gameObject, "Node");
+                        }
+                    }
+                }
+            }
+        }
 
         GUILayout.FlexibleSpace();
         GUILayout.Label("Geojson", EditorStyles.boldLabel);
