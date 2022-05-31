@@ -30844,15 +30844,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localizedName:
-    ru: 
-    en: 
+    ru: "\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u0443\u0447\u0435\u0431\u043D\u044B\u0439
+      \u043A\u043E\u0440\u043F\u0443\u0441"
+    en: Main academic building
   altName:
-    ru: 
-    en: 
+    ru: "\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u0443\u0447\u0435\u0431\u043D\u044B\u0439
+      \u043A\u043E\u0440\u043F\u0443\u0441"
+    en: "\u0413\u043B\u0430\u0432\u043D\u044B\u0439 \u0443\u0447\u0435\u0431\u043D\u044B\u0439
+      \u043A\u043E\u0440\u043F\u0443\u0441"
   addressId: {fileID: 11400000, guid: 956bd6648215a414b9d61c00da639900, type: 2}
   category: 4
   restriction: 2
-  rotation: 0
+  rotation: 18.65
   showDisplayPoint: 0
   displayPoint_: {x: 0, y: 0}
   aerial: {fileID: 0}

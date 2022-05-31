@@ -1290,9 +1290,16 @@ namespace IMDF.Feature
         [JsonConverter(typeof(StringEnumConverter))]
         public enum Category
         {
-            [EnumMember(Value = "parking.car")] parkingCar,
-            [EnumMember(Value = "parking.bicycle")] parkingBicycle,
-            banch
+            [EnumMember(Value = "parking.car")] parkingCar = 0,
+            [EnumMember(Value = "parking.bicycle")] parkingBicycle = 1,
+            banch = 2,
+            metro = 3,
+            [EnumMember(Value = "stadium")] stadium = 9,
+            [EnumMember(Value = "stadium.football")] stadiumFootball = 4,
+            [EnumMember(Value = "stadium.basketball")] stadiumBasketbal = 5,
+            [EnumMember(Value = "stadium.volleyball")] stadiumVolleybal = 6,
+            entrance = 7,
+            playground = 8
         }
 
         public class Properties

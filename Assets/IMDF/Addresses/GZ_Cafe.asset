@@ -15,7 +15,7 @@ MonoBehaviour:
   address:
     address: "\u0443\u043B. \u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F,
       \u0434. 30"
-    unit: Occupant
+    unit: "\u041A\u0430\u0444\u0435\u0442\u0435\u0440\u0438\u0439 \xAB\u0411\u0443\u043B\u044C\u0432\u0430\u0440\xBB "
     locality: city
     province: RU-SPE
     country: RU
