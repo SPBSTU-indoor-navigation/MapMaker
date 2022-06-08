@@ -281,7 +281,7 @@ public class IMDFEditorWindow : EditorWindow
 
         GUILayout.Space(40);
         parentPath = EditorGUILayout.ObjectField("root", parentPath, typeof(Transform), true) as Transform;
-        if (GUILayout.Button("LR2PathNode"))
+        if (GUILayout.Button("Path Generator"))
         {
             if (parentPath)
             {

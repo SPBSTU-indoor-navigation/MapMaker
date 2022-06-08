@@ -768,6 +768,7 @@ namespace IMDF.Feature
         {
             public Category category;
             public Unit.Category? unit_categoty;
+            public RestrictionCategory? unit_restriction;
             public int? accessibility = null;
             public int? access_control = null;
             public Door door;
@@ -780,6 +781,7 @@ namespace IMDF.Feature
             {
                 category = opening.category;
                 unit_categoty = opening.GetComponentInParent<IMDF.Unit>(true)?.category;
+                unit_restriction = opening.GetComponentInParent<IMDF.Unit>(true)?.restriction;
                 name = opening.localizedName.getFeature();
                 alt_name = opening.altName.getFeature();
 
@@ -794,7 +796,7 @@ namespace IMDF.Feature
         public Opening(IMDF.Opening opening)
         {
             identifier = opening.guid;
-            geometry = new GeoJSONLineString { points = opening.GetPoints() };
+            geometry = new GeoJSONLineString { points = opening.GetGeoPoints() };
             properties = new Properties(opening);
         }
 
@@ -1120,6 +1122,9 @@ namespace IMDF.Feature
             restroom = 9,
             [EnumMember(Value = "restroom.female")] restroomFemale = 10,
             [EnumMember(Value = "restroom.male")] restroomMale = 11,
+            ticket = 12,
+            museum = 13,
+            [EnumMember(Value = "concerthall")] concertHall = 14,
 
             unspecified = 10000,
         }
@@ -1493,6 +1498,7 @@ namespace IMDF.Feature
     public class IMDFDecoder
     {
         public static Dictionary<FeatureMB, Occupant> iOccupants = new Dictionary<FeatureMB, Occupant>();
+        public static Dictionary<FeatureMB, IAnnotation> iAnnotations = new Dictionary<FeatureMB, IAnnotation>();
         public static void Ser()
         {
             var features = GameObject.FindObjectsOfType<FeatureMB>(true);
@@ -1506,13 +1512,21 @@ namespace IMDF.Feature
                                     .Where(t => t.Value != null)
                                     .ToDictionary(t => t.Key, t => t.Value);
 
+            iAnnotations = GameObject.FindObjectsOfType<MonoBehaviour>(true).OfType<IAnnotation>()
+                                        .ToDictionary(t => t as FeatureMB, t => t)
+                                        .Where(t => t.Value != null)
+                                        .ToDictionary(t => t.Key, t => t.Value);
+
 
             List<GeoJSONObject> associetedPath = new List<GeoJSONObject>();
             foreach (var node in pathNodes)
             {
                 foreach (var item in node.associatedFeatures)
                 {
-                    associetedPath.Add(new NavPathAssocieted(iOccupants.ContainsKey(item) ? IMDFDecoder.iOccupants[item].identifier : item.guid, node));
+                    if (iAnnotations.TryGetValue(item, out IAnnotation annotation) && annotation.identifier.HasValue)
+                    {
+                        associetedPath.Add(new NavPathAssocieted(annotation.identifier.Value, node));
+                    }
                 }
             }
 

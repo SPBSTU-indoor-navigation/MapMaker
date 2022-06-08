@@ -18,7 +18,7 @@ public class ClassroomNamer : MonoBehaviour
         u.altName.en = name;
 
         u.localizedName.ru = templateRU.Replace("{name}", name);
-        u.localizedName.en = templateRU.Replace("{name}", name);
+        u.localizedName.en = templateEN.Replace("{name}", name);
 
         u.OnValidate();
 

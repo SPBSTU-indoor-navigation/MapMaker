@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace IMDF
 {
-    public class Amenity : GeometryPoint
+    public class Amenity : GeometryPoint, IAnnotation
     {
         public enum DetailLevel
         {
@@ -28,6 +29,8 @@ namespace IMDF
 
         [Space]
         public DetailLevel detailLevel;
+
+        Guid? IAnnotation.identifier => guid;
 
         private void OnDrawGizmos()
         {

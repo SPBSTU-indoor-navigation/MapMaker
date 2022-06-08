@@ -8,7 +8,21 @@ namespace IMDF
     [ExecuteAlways]
     public class FeatureMB : MonoBehaviour
     {
-        public System.Guid guid;
+        public string id;
+
+        private System.Guid guid_;
+        public System.Guid guid
+        {
+            get
+            {
+                return guid_;
+            }
+            set
+            {
+                guid_ = value;
+                id = value.ToString();
+            }
+        }
 
         public virtual void GenerateGUID()
         {
@@ -55,11 +69,29 @@ namespace IMDF
     [RequireComponent(typeof(GeometryLineEdit))]
     public class GeometryLine : FeatureMB
     {
-        public Feature.Point[] GetPoints()
+        GeometryLineEdit _geometryLineEdit;
+        protected GeometryLineEdit geometryLineEdit
+        {
+            get
+            {
+                if (_geometryLineEdit == null)
+                    _geometryLineEdit = GetComponent<GeometryLineEdit>();
+                return _geometryLineEdit;
+            }
+        }
+
+        public Feature.Point[] GetGeoPoints()
         {
             return new Feature.Point[2] {
              GeoMap.CalculateGeo(transform.position).GetPoint(),
              GeoMap.CalculateGeo(transform.TransformPoint(GetComponent<GeometryLineEdit>().secondPoint)).GetPoint() };
+        }
+
+        public Vector3[] GetPoints()
+        {
+            return new Vector3[2] {
+                transform.position,
+                transform.TransformPoint(GetComponent<GeometryLineEdit>().secondPoint) };
         }
     }
 

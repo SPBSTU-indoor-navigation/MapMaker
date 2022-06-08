@@ -146,17 +146,18 @@ public class PathEditorOverlay : Overlay
                 }
                 else
                 {
-                    var associeted = NearestAsscosieted();
-                    if (associeted)
-                    {
-                        Undo.RecordObject(lineStart, "Connect associeted");
-                        lineStart.associatedFeatures.Add(associeted);
-                        lineStart = null;
-                        return;
-                    }
 
                     if (e.alt)
                     {
+                        var associeted = NearestAsscosieted();
+                        if (associeted)
+                        {
+                            Undo.RecordObject(lineStart, "Connect associeted");
+                            lineStart.associatedFeatures.Add(associeted);
+                            lineStart = null;
+                            return;
+                        }
+
                         if (nearestNode)
                         {
                             Undo.RecordObjects(new Object[] { lineStart, nearestNode }, "Remove Line");
@@ -197,7 +198,7 @@ public class PathEditorOverlay : Overlay
                 Handles.DrawLine(lineStart.transform.position, mousePos);
 
                 var associeted = NearestAsscosieted();
-                if (associeted)
+                if (associeted && e.alt)
                 {
                     Handles.color = Color.gray;
                     Handles.DrawLine(mousePos, associeted.transform.position);

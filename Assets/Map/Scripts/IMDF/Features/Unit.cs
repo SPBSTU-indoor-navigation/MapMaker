@@ -6,7 +6,7 @@ using UnityEngine;
 namespace IMDF
 {
     [RequireComponent(typeof(RefferencePointEditor))]
-    public class Unit : GeometryPolygon, IRefferencePoint, IAddress, IAnchor, IOccupant
+    public class Unit : GeometryPolygon, IRefferencePoint, IAddress, IAnchor, IOccupant, IAnnotation
     {
 
         public LocalizedName localizedName;
@@ -72,6 +72,8 @@ namespace IMDF
                 return null;
             }
         }
+
+        System.Guid? IAnnotation.identifier => ((IOccupant)this).occupant?.identifier;
 
         public System.Guid anchorGuid, addresGuid, occupantGuid;
 

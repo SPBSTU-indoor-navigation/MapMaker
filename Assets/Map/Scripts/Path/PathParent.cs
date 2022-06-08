@@ -29,7 +29,7 @@ public class PathParent : MonoBehaviour
                 Gizmos.DrawLine(node.transform.position, neighbors.transform.position);
             }
 
-            Gizmos.color = Color.gray;
+            Gizmos.color = Color.blue;
             foreach (var associeted in node.associatedFeatures)
             {
                 Gizmos.DrawLine(node.transform.position, associeted.transform.position);

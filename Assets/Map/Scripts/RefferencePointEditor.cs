@@ -8,6 +8,11 @@ public interface IAddress
     IMDF.Address address { get; }
 }
 
+public interface IAnnotation
+{
+    public System.Guid? identifier { get; }
+}
+
 public interface IOccupant
 {
     IMDF.Feature.Occupant occupant { get; }

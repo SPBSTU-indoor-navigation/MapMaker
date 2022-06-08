@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace IMDF
 {
-    public class Occupant : GeometryPoint, IAnchor, IAddress, IOccupant
+    public class Occupant : GeometryPoint, IAnchor, IAddress, IOccupant, IAnnotation
     {
         public LocalizedName fullName;
         public LocalizedName shortName;
@@ -23,6 +24,8 @@ namespace IMDF
         public bool hasOccupant => true;
 
         Feature.Occupant IOccupant.occupant => new Feature.Occupant(this);
+
+        Guid? IAnnotation.identifier => guid;
 
         [HideInInspector] public System.Guid anchorGuid;
 

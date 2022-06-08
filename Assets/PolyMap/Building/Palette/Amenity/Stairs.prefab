@@ -44,13 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33fa8f5c50bb4430a066df4a297d982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   category: 12
   localizedName:
     ru: "\u041B\u0435\u0441\u0442\u043D\u0438\u0446\u0430"
     en: Stairs
   altName:
-    ru: 
-    en: 
+    ru: "\u041B\u0435\u0441\u0442\u043D\u0438\u0446\u0430"
+    en: Stairs
   units: []
   hours: 
   phone: 
