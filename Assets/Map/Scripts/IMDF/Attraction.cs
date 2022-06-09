@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace IMDF
 {
-    public class Attraction : GeometryPoint
+    public class Attraction : GeometryPoint, IAnnotation
     {
         public Feature.Attraction.Category category;
         public LocalizedName localizedName;
@@ -13,7 +14,7 @@ namespace IMDF
         public string image;
         public Building building;
 
-
+        Guid? IAnnotation.identifier => guid;
 
         private void OnDrawGizmos()
         {

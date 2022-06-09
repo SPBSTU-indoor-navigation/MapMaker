@@ -10,6 +10,18 @@ public class PathNode : IMDF.GeometryPoint
     public List<PathNode> neighbors = new List<PathNode>();
     public List<IMDF.FeatureMB> associatedFeatures = new List<IMDF.FeatureMB>();
 
+    private void Start()
+    {
+        gameObject.layer = LayerMask.NameToLayer("path");
+    }
+
+    // private void Update()
+    // {
+
+    //     gameObject.layer = LayerMask.NameToLayer("path");
+    //     Debug.Log(gameObject.layer);
+    // }
+
     private void OnDrawGizmos()
     {
         // Gizmos.color = Selection.gameObjects.Contains(gameObject) ? Color.blue : Color.yellow;

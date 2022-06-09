@@ -1124,7 +1124,10 @@ namespace IMDF.Feature
             [EnumMember(Value = "restroom.male")] restroomMale = 11,
             ticket = 12,
             museum = 13,
-            [EnumMember(Value = "concerthall")] concertHall = 14,
+            [EnumMember(Value = "concert.hall")] concertHall = 14,
+            archive = 15,
+            [EnumMember(Value = "reading.room")] readingRoom = 16,
+            [EnumMember(Value = "academic.council")] academicCouncil = 17,
 
             unspecified = 10000,
         }
@@ -1501,8 +1504,10 @@ namespace IMDF.Feature
         public static Dictionary<FeatureMB, IAnnotation> iAnnotations = new Dictionary<FeatureMB, IAnnotation>();
         public static void Ser()
         {
+            UUIDStorage.shared.Load();
             var features = GameObject.FindObjectsOfType<FeatureMB>(true);
             foreach (var feature in features) feature.GenerateGUID();
+            UUIDStorage.shared.Save();
 
             var pathNodes = GameObject.FindObjectsOfType<PathNode>(true);
             foreach (var node in pathNodes) node.Fix();

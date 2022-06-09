@@ -11,7 +11,7 @@ namespace IMDF
         public Address address;
         public void GenerateGUID()
         {
-            address.guid = Guid.NewGuid();
+            address.guid = UUIDStorage.shared.GetAddressGUID(address);
         }
     }
 

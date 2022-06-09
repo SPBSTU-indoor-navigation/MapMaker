@@ -95,9 +95,10 @@ namespace IMDF
                 {
                     pathNode = new Transform[single ? 1 : 2];
                     pathNode[0] = new GameObject("PathNode0").transform;
+                    pathNode[0].gameObject.AddComponent<PathNode>();
                     pathNode[0].GetComponent<PathNode>().associatedFeatures.Add(GetComponentInParent<Unit>());
                     pathNode[0].GetComponent<PathNode>().associatedFeatures = pathNode[0].GetComponent<PathNode>().associatedFeatures.Distinct().ToList();
-                    pathNode[0].gameObject.AddComponent<PathNode>();
+
                     DrawIcon(pathNode[0].gameObject, 4);
                     pathNode[0].SetParent(transform);
 

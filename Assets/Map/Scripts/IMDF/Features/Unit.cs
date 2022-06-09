@@ -119,9 +119,9 @@ namespace IMDF
         public override void GenerateGUID()
         {
             base.GenerateGUID();
-            anchorGuid = System.Guid.NewGuid();
-            addresGuid = System.Guid.NewGuid();
-            occupantGuid = System.Guid.NewGuid();
+            anchorGuid = UUIDStorage.shared.GetGUID(this, 1);
+            addresGuid = UUIDStorage.shared.GetGUID(this, 2);
+            occupantGuid = UUIDStorage.shared.GetGUID(this, 3);
         }
 
 

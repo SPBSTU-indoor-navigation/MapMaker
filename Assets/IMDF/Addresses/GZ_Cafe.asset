@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   address:
     address: "\u0443\u043B. \u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F,
-      \u0434. 30"
+      \u0434. 29, \u043B\u0438\u0442. \u041F, \u0413\u0417"
     unit: "\u041A\u0430\u0444\u0435\u0442\u0435\u0440\u0438\u0439 \xAB\u0411\u0443\u043B\u044C\u0432\u0430\u0440\xBB "
     locality: city
     province: RU-SPE

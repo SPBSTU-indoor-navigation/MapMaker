@@ -33,7 +33,7 @@ namespace IMDF
         {
             base.GenerateGUID();
             address?.GenerateGUID();
-            anchorGuid = System.Guid.NewGuid();
+            anchorGuid = UUIDStorage.shared.GetGUID(this, 2);
         }
     }
 }

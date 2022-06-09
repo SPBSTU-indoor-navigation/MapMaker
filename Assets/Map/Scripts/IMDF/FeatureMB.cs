@@ -26,7 +26,7 @@ namespace IMDF
 
         public virtual void GenerateGUID()
         {
-            guid = System.Guid.NewGuid();
+            guid = UUIDStorage.shared.GetGUID(this);
         }
     }
 
