@@ -1882,7 +1882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5532707336122677061
 Transform:
   m_ObjectHideFlags: 0
@@ -5920,8 +5920,9 @@ GameObject:
   - component: {fileID: 1609752244362895332}
   - component: {fileID: 8351519086860427688}
   - component: {fileID: 6533513632725114054}
+  - component: {fileID: 4230216329183353978}
   m_Layer: 0
-  m_Name: "restroomMale_\u0422\u0443\u0430\u043B\u0435\u0442 \u043C."
+  m_Name: "restroomMale_\u0422\u0443\u0430\u043B\u0435\u0442 \u041C."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6063,10 +6064,10 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u043C\u0443\u0436\u0441\u043A\u043E\u0439"
-    en: Restroom female
+    en: Restroom male
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u043C."
-    en: Restroom m.
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u041C."
+    en: Restroom M.
   category: 38
   restriction: 2
   showDisplayPoint: 0
@@ -6074,6 +6075,21 @@ MonoBehaviour:
   generateOccupant: 1
   occupantCategory: 11
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &4230216329183353978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400465713421608482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &401070026298231041
 GameObject:
   m_ObjectHideFlags: 0
@@ -16485,7 +16501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6126217996115382264
 Transform:
   m_ObjectHideFlags: 0
@@ -17917,8 +17933,9 @@ GameObject:
   - component: {fileID: 4879313223649723972}
   - component: {fileID: 5659552653016173907}
   - component: {fileID: 831254964425368303}
+  - component: {fileID: 8364740539754713400}
   m_Layer: 0
-  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
+  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18060,10 +18077,10 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436\u0435\u043D\u0441\u043A\u0438\u0439"
-    en: 
+    en: Restroom female
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
-    en: 
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
+    en: Restroom F.
   category: 36
   restriction: 2
   showDisplayPoint: 0
@@ -18071,6 +18088,21 @@ MonoBehaviour:
   generateOccupant: 1
   occupantCategory: 10
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &8364740539754713400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313840234819388989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &1326321714547304371
 GameObject:
   m_ObjectHideFlags: 0
@@ -47406,8 +47438,9 @@ GameObject:
   - component: {fileID: 8904690486771356068}
   - component: {fileID: 5529149058862996542}
   - component: {fileID: 6793282844562259740}
+  - component: {fileID: 6126626830030482735}
   m_Layer: 0
-  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
+  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47549,10 +47582,10 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436\u0435\u043D\u0441\u043A\u0438\u0439"
-    en: 
+    en: Restroom female
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
-    en: 
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
+    en: Restroom F.
   category: 36
   restriction: 2
   showDisplayPoint: 0
@@ -47560,6 +47593,21 @@ MonoBehaviour:
   generateOccupant: 1
   occupantCategory: 10
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &6126626830030482735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3698036069561299523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &3699806820197508017
 GameObject:
   m_ObjectHideFlags: 0
@@ -78106,8 +78154,9 @@ GameObject:
   - component: {fileID: 2532664951139070146}
   - component: {fileID: 3021387924574334765}
   - component: {fileID: 4137369824623934432}
+  - component: {fileID: 4910642713490908901}
   m_Layer: 0
-  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u043C."
+  m_Name: "restroomMale_\u0422\u0443\u0430\u043B\u0435\u0442 \u041C."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78249,17 +78298,32 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u043C\u0443\u0436\u0441\u043A\u043E\u0439"
-    en: 
+    en: Restroom male
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u043C."
-    en: 
-  category: 36
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u041C."
+    en: Restroom M.
+  category: 38
   restriction: 2
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
-  occupantCategory: 10
+  occupantCategory: 11
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &4910642713490908901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993065404864498949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &5994500370688785444
 GameObject:
   m_ObjectHideFlags: 0
@@ -87608,8 +87672,9 @@ GameObject:
   - component: {fileID: 4873904484844654324}
   - component: {fileID: 4693382747635668610}
   - component: {fileID: 6092139198456752857}
+  - component: {fileID: 6485179447735218893}
   m_Layer: 0
-  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
+  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87751,10 +87816,10 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436\u0435\u043D\u0441\u043A\u0438\u0439"
-    en: 
+    en: Restroom female
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
-    en: 
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
+    en: Restroom F.
   category: 36
   restriction: 2
   showDisplayPoint: 0
@@ -87762,6 +87827,21 @@ MonoBehaviour:
   generateOccupant: 1
   occupantCategory: 10
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &6485179447735218893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6734196818449977998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &6739182087286531491
 GameObject:
   m_ObjectHideFlags: 0
@@ -93736,8 +93816,9 @@ GameObject:
   - component: {fileID: 961337716012651896}
   - component: {fileID: 7044301071211722216}
   - component: {fileID: 3983096646542502798}
+  - component: {fileID: 5893567365717762131}
   m_Layer: 0
-  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u043C."
+  m_Name: "restroomMale_\u0422\u0443\u0430\u043B\u0435\u0442 \u041C."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93847,7 +93928,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -1.78125, y: 6}
-      - {x: 1.84375, y: 6}
+      - {x: 1.71875, y: 6}
       - {x: 1.71875, y: -6}
       - {x: -1.78125, y: -6}
 --- !u!114 &7044301071211722216
@@ -93879,17 +93960,32 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u043C\u0443\u0436\u0441\u043A\u043E\u0439"
-    en: 
+    en: Restroom male
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u043C."
-    en: 
-  category: 36
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u041C."
+    en: Restroom M.
+  category: 38
   restriction: 2
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
-  occupantCategory: 10
+  occupantCategory: 11
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &5893567365717762131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7195383732198819492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &7213813788476149541
 GameObject:
   m_ObjectHideFlags: 0
@@ -99901,8 +99997,9 @@ GameObject:
   - component: {fileID: 609267370690541232}
   - component: {fileID: 7777747397871191293}
   - component: {fileID: 9108491525515914946}
+  - component: {fileID: 6950171698790096689}
   m_Layer: 0
-  m_Name: "restroomMale_\u0422\u0443\u0430\u043B\u0435\u0442 \u043C."
+  m_Name: "restroomMale_\u0422\u0443\u0430\u043B\u0435\u0442 \u041C."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100044,10 +100141,10 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u043C\u0443\u0436\u0441\u043A\u043E\u0439"
-    en: Restroom female
+    en: Restroom male
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u043C."
-    en: Restroom m.
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u041C."
+    en: Restroom M.
   category: 38
   restriction: 2
   showDisplayPoint: 0
@@ -100055,6 +100152,21 @@ MonoBehaviour:
   generateOccupant: 1
   occupantCategory: 11
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &6950171698790096689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559144088599161832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &7561198659219826932
 GameObject:
   m_ObjectHideFlags: 0
@@ -103538,8 +103650,9 @@ GameObject:
   - component: {fileID: 1848143399042484850}
   - component: {fileID: 2394556665793439272}
   - component: {fileID: 8457577615975543883}
+  - component: {fileID: 7997020953852427485}
   m_Layer: 0
-  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
+  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103681,10 +103794,10 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436\u0435\u043D\u0441\u043A\u0438\u0439"
-    en: 
+    en: Restroom female
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
-    en: 
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
+    en: Restroom F.
   category: 36
   restriction: 2
   showDisplayPoint: 0
@@ -103692,6 +103805,21 @@ MonoBehaviour:
   generateOccupant: 1
   occupantCategory: 10
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &7997020953852427485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7792080481702724010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &7792461411411559131
 GameObject:
   m_ObjectHideFlags: 0
@@ -110638,8 +110766,9 @@ GameObject:
   - component: {fileID: 4169477176252729797}
   - component: {fileID: 1597331246385112774}
   - component: {fileID: 7440812213166167236}
+  - component: {fileID: 4434385521730971108}
   m_Layer: 0
-  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
+  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110781,10 +110910,10 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436\u0435\u043D\u0441\u043A\u0438\u0439"
-    en: 
+    en: Restroom female
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
-    en: 
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
+    en: Restroom F.
   category: 36
   restriction: 2
   showDisplayPoint: 0
@@ -110792,6 +110921,21 @@ MonoBehaviour:
   generateOccupant: 1
   occupantCategory: 10
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &4434385521730971108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8362571265896024889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &8362965211585719729
 GameObject:
   m_ObjectHideFlags: 0
@@ -116909,8 +117053,9 @@ GameObject:
   - component: {fileID: 1792941073471231000}
   - component: {fileID: 4470742125102261635}
   - component: {fileID: 1124890855997225657}
+  - component: {fileID: 460222769451548940}
   m_Layer: 0
-  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
+  m_Name: "restroomFemale_\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117052,10 +117197,10 @@ MonoBehaviour:
   id: 
   localizedName:
     ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436\u0435\u043D\u0441\u043A\u0438\u0439"
-    en: 
+    en: Restroom female
   altName:
-    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0436."
-    en: 
+    ru: "\u0422\u0443\u0430\u043B\u0435\u0442 \u0416."
+    en: Restroom F.
   category: 36
   restriction: 2
   showDisplayPoint: 0
@@ -117063,6 +117208,21 @@ MonoBehaviour:
   generateOccupant: 1
   occupantCategory: 10
   displayPoint_: {x: 0.04371339, y: -0.39543456}
+--- !u!114 &460222769451548940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8732037439763362072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  templateRU: 
+  templateEN: 
 --- !u!1 &8749847707269673896
 GameObject:
   m_ObjectHideFlags: 0
@@ -123021,11 +123181,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
---- !u!4 &7485625458210833092 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8125016918809523206, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
-  m_PrefabInstance: {fileID: 1667338359559239362}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8937097083314794228 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7720683880088426550, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
@@ -123037,6 +123192,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33fa8f5c50bb4430a066df4a297d982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &7485625458210833092 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8125016918809523206, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
+  m_PrefabInstance: {fileID: 1667338359559239362}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2225453978240094856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123453,11 +123613,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
---- !u!4 &4809249843670462325 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8125016918809523206, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
-  m_PrefabInstance: {fileID: 3637844818047703923}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6438275562560275269 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7720683880088426550, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
@@ -123469,6 +123624,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33fa8f5c50bb4430a066df4a297d982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &4809249843670462325 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8125016918809523206, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
+  m_PrefabInstance: {fileID: 3637844818047703923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4007285231530248070
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280ad00f7d2fd4aa487059d0f6b4b910, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   localizedName:
     ru: "\u041F\u0430\u0440\u043A\u043E\u0432\u043A\u0430"
-    en: "\u041F\u0430\u0440\u043A\u043E\u0432\u043A\u0430"
+    en: Parking
   altName:
     ru: "\u041F\u0430\u0440\u043A\u043E\u0432\u043A\u0430"
     en: Parking
