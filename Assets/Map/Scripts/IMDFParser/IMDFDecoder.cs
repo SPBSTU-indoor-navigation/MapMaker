@@ -812,25 +812,26 @@ namespace IMDF.Feature
         [JsonConverter(typeof(StringEnumConverter))]
         public enum CategoryMin
         {
-            atm, //Банкомат
-            eatingdrinking,
-            escalator,
-            entry, //вход
-            faregate, //пропускной вход
-            information,
-            library,
-            restroom,
-            [EnumMember(Value = "restroom.female")] restroomFemale,
-            [EnumMember(Value = "restroom.male")] restroomMale,
-            seat,
-            security,
-            stairs,
-            [EnumMember(Value = "security.checkpoint")] securityCheckpoint,
-            smokingarea,
-            studentservices,
-            swimmingpool,
-            vendingmachine,
-            unspecified
+            atm = 0, //Банкомат
+            eatingdrinking = 1,
+            escalator = 2,
+            entry = 3, //вход
+            faregate = 4, //пропускной вход
+            information = 5,
+            library = 6,
+            restroom = 7,
+            [EnumMember(Value = "restroom.female")] restroomFemale = 8,
+            [EnumMember(Value = "restroom.male")] restroomMale = 9,
+            seat = 10,
+            security = 11,
+            stairs = 12,
+            elevator = 18,
+            [EnumMember(Value = "security.checkpoint")] securityCheckpoint = 13,
+            smokingarea = 14,
+            studentservices = 15,
+            swimmingpool = 16,
+            vendingmachine = 17,
+            unspecified = 10000
         }
 
         [JsonConverter(typeof(StringEnumConverter))]
@@ -1117,6 +1118,7 @@ namespace IMDF.Feature
             library = 4,
             souvenirs = 5,
             [EnumMember(Value = "foodservice.coffee")] foodserviceCoffee = 6,
+            foodservice = 18,
             security = 7,
             wardrobe = 8,
             restroom = 9,
@@ -1414,15 +1416,31 @@ namespace IMDF.Feature
     {
         public class Properties
         {
+            [JsonConverter(typeof(StringEnumConverter))]
+            public enum Tag
+            {
+                dirt = 1,
+                service = 2,
+            }
+
             public Guid? level_id;
             public Guid? builing_id;
             public Guid[] neighbours;
+            public float weight;
+            public Tag[] tags;
 
             public Properties(PathNode node)
             {
                 this.neighbours = node.neighbors.Select(t => t.guid).ToArray();
                 level_id = node.GetComponentInParent<IMDF.Level>(true)?.guid;
                 builing_id = node.GetComponentInParent<IMDF.Building>(true)?.guid;
+                weight = node.weight;
+
+                List<Tag> tags = new List<Tag>();
+                if (node.isDirt) tags.Add(Tag.dirt);
+                if (node.isService) tags.Add(Tag.service);
+
+                this.tags = tags.ToArray();
             }
         }
 

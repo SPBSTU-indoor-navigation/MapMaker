@@ -26,6 +26,14 @@ public class PathParent : MonoBehaviour
             Gizmos.color = Color.yellow;
             foreach (var neighbors in node.neighbors)
             {
+                if (!neighbors.neighbors.Contains(node))
+                {
+                    Gizmos.color = Color.magenta;
+                }
+                else
+                {
+                    Gizmos.color = Color.yellow;
+                }
                 Gizmos.DrawLine(node.transform.position, neighbors.transform.position);
             }
 

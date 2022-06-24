@@ -7,8 +7,15 @@ using System.Linq;
 
 public class PathNode : IMDF.GeometryPoint
 {
+    public float weight = 1;
+    [Space]
+    public bool isDirt = false;
+    public bool isService = false;
+    [Space]
     public List<PathNode> neighbors = new List<PathNode>();
     public List<IMDF.FeatureMB> associatedFeatures = new List<IMDF.FeatureMB>();
+
+
 
     private void Start()
     {
@@ -41,6 +48,7 @@ public class PathNode : IMDF.GeometryPoint
         // {
         //     Gizmos.DrawLine(transform.position, associeted.transform.position);
         // }
+
     }
 
     public void Connect(PathNode node, bool biDirectinal = true)

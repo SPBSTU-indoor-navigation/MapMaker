@@ -61,10 +61,16 @@ public class UUIDStorage : MonoBehaviour
 
     public void Load()
     {
+        for (var i = 0; i < items.Count; i++)
+        {
+            items[i].items = items[i].items.Where(t => t.featureMB != null).ToList();
+        }
+
         dict = new Dictionary<IMDF.FeatureMB, System.Guid>[items.Count];
         for (var i = 0; i < items.Count; i++)
         {
-            dict[i] = items[i].items.ToDictionary(t => t.featureMB, t => System.Guid.Parse(t.id));
+            dict[i] = items[i].items
+                .ToDictionary(t => t.featureMB, t => System.Guid.Parse(t.id));
         }
     }
 
