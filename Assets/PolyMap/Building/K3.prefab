@@ -7623,8 +7623,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u0414\u0435\u043A\u0430\u043D\u0430\u0442 \u0418\u041A\u041D\u0422, 306"
-    en: Admininstrauin ICST, 306
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 306, \u0414\u0435\u043A\u0430\u043D\u0430\u0442
+      \u0418\u041A\u041D\u0422"
+    en: Cabinet 306, Admininstrauin ICST
   altName:
     ru: 306
     en: 306
@@ -30103,7 +30104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4423960487730429459
 Transform:
   m_ObjectHideFlags: 0
@@ -35454,7 +35455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5723963690905919675
 Transform:
   m_ObjectHideFlags: 0
