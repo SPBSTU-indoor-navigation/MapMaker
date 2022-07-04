@@ -10,6 +10,7 @@ public class IMDFEditorWindow : EditorWindow
 {
     public static float snapping;
     Transform parentPath;
+    public string mapName, password;
 
     // Add menu named "My Window" to the Window menu
     [MenuItem("IMDF/Controll window")]
@@ -320,6 +321,16 @@ public class IMDFEditorWindow : EditorWindow
         if (GUILayout.Button("Serialize"))
         {
             IMDFDecoder.Ser();
+        }
+
+        GUILayout.BeginHorizontal();
+        mapName = EditorGUILayout.TextField(mapName);
+        password = EditorGUILayout.TextField(password);
+        GUILayout.EndHorizontal();
+
+        if (GUILayout.Button("Send"))
+        {
+            IMDFDecoder.Send(mapName, password, this);
         }
         // GUILayout.Label("Base Settings", EditorStyles.boldLabel);
         // myString = EditorGUILayout.TextField("Text Field", myString);

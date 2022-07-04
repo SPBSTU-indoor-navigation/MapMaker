@@ -8,6 +8,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using Newtonsoft.Json.Converters;
 using UnityEditor;
+using Unity.EditorCoroutines.Editor;
+using UnityEngine.Networking;
 
 namespace IMDF.Feature
 {
@@ -1520,7 +1522,8 @@ namespace IMDF.Feature
     {
         public static Dictionary<FeatureMB, Occupant> iOccupants = new Dictionary<FeatureMB, Occupant>();
         public static Dictionary<FeatureMB, IAnnotation> iAnnotations = new Dictionary<FeatureMB, IAnnotation>();
-        public static void Ser()
+
+        static (GeoJSONObject[], string)[] Convert()
         {
             UUIDStorage.shared.Load();
             var features = GameObject.FindObjectsOfType<FeatureMB>(true);
@@ -1579,9 +1582,16 @@ namespace IMDF.Feature
                 (associetedPath.ToArray(), "navPathAssocieted"),
             };
 
+            return featuresType;
+
+        }
+
+        public static void Ser()
+        {
+            var featuresType = Convert();
+
             var path = EditorUtility.SaveFolderPanel("Save IMDF achive", PlayerPrefs.GetString("IMDF_PATH") ?? "", "IMDF");
             PlayerPrefs.SetString("IMDF_PATH", path);
-
 
             foreach (var item in featuresType)
             {
@@ -1591,7 +1601,29 @@ namespace IMDF.Feature
 
 
             File.WriteAllText(Path.Combine(path, "manifest.json"), JsonConvert.SerializeObject(Manifest.CreateManifest()));
+        }
 
+        public static void Send(string id, string password, UnityEngine.Object obj)
+        {
+            var featuresType = Convert();
+
+            UnityWebRequest request = UnityWebRequest.Post("localhost:6000/api/saveMap/" + id, "");
+
+            var dict = featuresType.ToDictionary(t => t.Item2, t => t.Item1);
+
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(dict));
+            request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            request.SetRequestHeader("authorization", "Bearer " + password);
+
+            EditorCoroutineUtility.StartCoroutine(Send(request), obj);
+        }
+
+        static IEnumerator Send(UnityWebRequest request)
+        {
+            yield return request.SendWebRequest();
         }
 
         public static string ToJSON(GeoJSONObject obj)
