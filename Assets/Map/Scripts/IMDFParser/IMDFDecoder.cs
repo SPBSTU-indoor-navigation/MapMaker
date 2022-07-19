@@ -396,7 +396,7 @@ namespace IMDF.Feature
                 website = venue.website;
 
                 address_id = venue.address.address.guid;
-                navpath_begin_id = venue.defaultPathBegin.guid;
+                navpath_begin_id = venue.defaultPathBegin?.guid;
             }
         }
 
@@ -1525,6 +1525,33 @@ namespace IMDF.Feature
 
         static (GeoJSONObject[], string)[] Convert()
         {
+
+            GameObject.FindObjectsOfType<PolygonGeometry>(true).Where(t => t.GetComponent<IMDF.Building>() || t.GetComponent<IMDF.Venue>()).ToList().ForEach(t =>
+            {
+                t.GetComponents<PolygonCollider2D>().ToList().ForEach(c =>
+                {
+                    for (int i = 0; i < c.pathCount; i++)
+                    {
+                        var points = c.GetPath(i);
+                        if (points.Length <= 2) continue;
+
+                        var sum = 0f;
+                        for (int j = 0; j < points.Length; j++)
+                        {
+                            var p1 = points[j];
+                            var p2 = points[(j + 1) % points.Length];
+                            sum += (p2.x - p1.x) * (p2.y + p1.y);
+                        }
+
+                        if (i == 0 && sum < 0 ||
+                            i != 0 && sum > 0)
+                        {
+                            c.SetPath(i, points.Reverse().ToArray());
+                        }
+                    }
+                });
+            });
+
             UUIDStorage.shared.Load();
             var features = GameObject.FindObjectsOfType<FeatureMB>(true);
             foreach (var feature in features) feature.GenerateGUID();
@@ -1607,7 +1634,7 @@ namespace IMDF.Feature
         {
             var featuresType = Convert();
 
-            UnityWebRequest request = UnityWebRequest.Post("localhost:6000/api/saveMap/" + id, "");
+            UnityWebRequest request = UnityWebRequest.Post("https://dev.mapstorage.polymap.ru/api/saveMap/" + id, "");
 
             var dict = featuresType.ToDictionary(t => t.Item2, t => t.Item1);
 
@@ -1623,7 +1650,11 @@ namespace IMDF.Feature
 
         static IEnumerator Send(UnityWebRequest request)
         {
+            Debug.Log("Sending...");
             yield return request.SendWebRequest();
+            Debug.Log(request.result);
+            Debug.Log(request.responseCode);
+            // Debug.Log("DONE");
         }
 
         public static string ToJSON(GeoJSONObject obj)

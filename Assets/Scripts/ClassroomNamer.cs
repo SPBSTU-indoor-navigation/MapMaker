@@ -16,6 +16,8 @@ public class ClassroomNamer : MonoBehaviour
     {
         var u = GetComponent<IMDF.Unit>();
 
+        if (!u) return;
+
         var ru = templateRU;
         var en = templateEN;
 
