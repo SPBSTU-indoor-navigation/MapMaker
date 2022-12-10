@@ -10,6 +10,8 @@ namespace IMDF
         public LocalizedName fullName;
         public LocalizedName shortName;
         public Feature.Occupant.Category category = Feature.Occupant.Category.unspecified;
+        public string description;
+        public string iconUrl;
 
         public AddressContainer address;
         public string hours;

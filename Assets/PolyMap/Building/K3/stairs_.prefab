@@ -557,6 +557,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4302744559040291104
@@ -1266,11 +1269,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
---- !u!4 &2104858235257261654 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8125016918809523206, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
-  m_PrefabInstance: {fileID: 7923009043679853136}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &491261427793781350 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7720683880088426550, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
@@ -1282,3 +1280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33fa8f5c50bb4430a066df4a297d982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2104858235257261654 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8125016918809523206, guid: aff78e85173f542478bc8696e2ae4e3c, type: 3}
+  m_PrefabInstance: {fileID: 7923009043679853136}
+  m_PrefabAsset: {fileID: 0}

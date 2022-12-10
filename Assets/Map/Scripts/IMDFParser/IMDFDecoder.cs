@@ -1146,6 +1146,8 @@ namespace IMDF.Feature
             public string phone = null;
             public string email = null;
             public string website = null;
+            public string description = null;
+            public string iconUrl = null;
             public Guid? correlation_id;
 
             public Properties() { }
@@ -1160,6 +1162,8 @@ namespace IMDF.Feature
                 phone = occupant.phone.OrNull();
                 website = occupant.website.OrNull();
                 email = occupant.email.OrNull();
+                iconUrl = occupant.iconUrl.OrNull();
+                description = occupant.description.OrNull();
             }
 
             public Properties(IMDF.Unit unit)
@@ -1168,6 +1172,10 @@ namespace IMDF.Feature
                 shortName = unit.altName.getFeature();
                 anchor_id = (unit as IAnchor).anchor.identifier;
                 category = unit.occupantCategory;
+                iconUrl = unit.iconUrl.OrNull();
+                description = unit.description.OrNull();
+                website = unit.website.OrNull();
+
             }
         }
 

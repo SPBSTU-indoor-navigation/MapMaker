@@ -47,10 +47,10 @@ MonoBehaviour:
   id: 
   category: 18
   localizedName:
-    ru: "\u041B\u0444\u0438\u0442"
+    ru: "\u041B\u0438\u0444\u0442"
     en: Elevator
   altName:
-    ru: "\u041B\u0444\u0438\u0442"
+    ru: "\u041B\u0438\u0444\u0442"
     en: Elevator
   units: []
   hours: 

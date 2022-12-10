@@ -20,6 +20,9 @@ namespace IMDF
         [Space]
         [Header("Occupant")]
         public bool generateOccupant = true;
+        public string iconUrl;
+        public string description;
+        public string website;
         public Feature.Occupant.Category occupantCategory = Feature.Occupant.Category.unspecified;
 
         [HideInInspector, SerializeField]
