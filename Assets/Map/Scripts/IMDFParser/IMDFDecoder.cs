@@ -1132,6 +1132,9 @@ namespace IMDF.Feature
             archive = 15,
             [EnumMember(Value = "reading.room")] readingRoom = 16,
             [EnumMember(Value = "academic.council")] academicCouncil = 17,
+            information = 18,
+            photobooth = 19,
+            firstaid = 20,
 
             unspecified = 10000,
         }
