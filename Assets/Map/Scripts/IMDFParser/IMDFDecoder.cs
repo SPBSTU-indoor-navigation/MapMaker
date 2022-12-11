@@ -1155,6 +1155,7 @@ namespace IMDF.Feature
 
             public Properties() { }
 
+            const string BASE_ICON_URL = "https://dev.image.umap.space/api/";
             public Properties(IMDF.Occupant occupant)
             {
                 name = occupant.fullName.getFeature();
@@ -1165,7 +1166,7 @@ namespace IMDF.Feature
                 phone = occupant.phone.OrNull();
                 website = occupant.website.OrNull();
                 email = occupant.email.OrNull();
-                iconUrl = occupant.iconUrl.OrNull();
+                iconUrl = string.IsNullOrWhiteSpace(occupant.iconUrl) ? null : BASE_ICON_URL + occupant.iconUrl + ".png";
                 description = occupant.description.OrNull();
             }
 
@@ -1175,7 +1176,7 @@ namespace IMDF.Feature
                 shortName = unit.altName.getFeature();
                 anchor_id = (unit as IAnchor).anchor.identifier;
                 category = unit.occupantCategory;
-                iconUrl = unit.iconUrl.OrNull();
+                iconUrl = string.IsNullOrWhiteSpace(unit.iconUrl) ? null : BASE_ICON_URL + unit.iconUrl + ".png";
                 description = unit.description.OrNull();
                 website = unit.website.OrNull();
 
