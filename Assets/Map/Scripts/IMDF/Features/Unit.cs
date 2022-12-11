@@ -21,6 +21,7 @@ namespace IMDF
         [Header("Occupant")]
         public bool generateOccupant = true;
         public string iconUrl;
+        [TextArea(1, 6)]
         public string description;
         public string website;
         public Feature.Occupant.Category occupantCategory = Feature.Occupant.Category.unspecified;
