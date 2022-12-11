@@ -1892,7 +1892,7 @@ GameObject:
   - component: {fileID: 3762602270156356963}
   - component: {fileID: 8071577885235329898}
   m_Layer: 0
-  m_Name: "auditorium_\u041B\u0435\u043A\u0442\u043E\u0440\u0438\u0439"
+  m_Name: "auditorium_\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u043B\u0435\u043A\u0442\u043E\u0440\u0438\u0439"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2032,10 +2032,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041B\u0435\u043A\u0442\u043E\u0440\u0438\u0439"
+    ru: "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u043B\u0435\u043A\u0442\u043E\u0440\u0438\u0439"
     en: 
   altName:
-    ru: "\u041B\u0435\u043A\u0442\u043E\u0440\u0438\u0439"
+    ru: "\u0411\u043E\u043B\u044C\u0448\u043E\u0439 \u043B\u0435\u043A\u0442\u043E\u0440\u0438\u0439"
     en: 
   category: 0
   restriction: 2
@@ -2043,7 +2043,9 @@ MonoBehaviour:
   address: {fileID: 0}
   generateOccupant: 1
   iconUrl: 
-  description: 
+  description: "\u0424\u0430\u043A\u0443\u043B\u044C\u0442\u0435\u0442 \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F
+    \u0441\u0442\u0443\u0434\u0435\u043D\u0447\u0435\u0441\u043A\u0438\u0445 \u0441\u043E\u043E\u0431\u0449\u0435\u0441\u0442\u0432\n\n200
+    \u043C\u0435\u0441\u0442"
   website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: 0}
@@ -2822,65 +2824,6 @@ MonoBehaviour:
   - {fileID: 7108315314171228644}
   - {fileID: 497864033149365521}
   associatedFeatures: []
---- !u!1 &1384744875686212116
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2575270035620142823}
-  - component: {fileID: 6238045575173809330}
-  m_Layer: 0
-  m_Name: Occupant (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2575270035620142823
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384744875686212116}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.090908, y: -6.022728, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6909377902144587742}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6238045575173809330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384744875686212116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f51230aa82f6e4c53aac8b6641592b55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 
-  fullName:
-    ru: 2x2
-    en: 
-  shortName:
-    ru: 2x2
-    en: 
-  category: 3
-  description: 
-  iconUrl: 
-  address: {fileID: 0}
-  hours: 
-  phone: 
-  email: 
-  website: 
 --- !u!1 &1428275013095992180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,8 +3132,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 647689945096800963}
-  - {fileID: 2575270035620142823}
-  - {fileID: 5031699654761336943}
   m_Father: {fileID: 7170615415676093687}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9399,7 +9340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7170615415676093687
 Transform:
   m_ObjectHideFlags: 0
@@ -10570,65 +10511,6 @@ MonoBehaviour:
   - {fileID: 8869213486678160895}
   - {fileID: 8981637248306802803}
   associatedFeatures: []
---- !u!1 &4324074426786223681
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5031699654761336943}
-  - component: {fileID: 7473943426326136538}
-  m_Layer: 0
-  m_Name: Occupant (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5031699654761336943
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4324074426786223681}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.090908, y: 6.227272, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6909377902144587742}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7473943426326136538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4324074426786223681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f51230aa82f6e4c53aac8b6641592b55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 
-  fullName:
-    ru: 2x2
-    en: 
-  shortName:
-    ru: 2x2
-    en: 
-  category: 3
-  description: 
-  iconUrl: 
-  address: {fileID: 0}
-  hours: 
-  phone: 
-  email: 
-  website: 
 --- !u!1 &4328540771762024561
 GameObject:
   m_ObjectHideFlags: 0
@@ -12105,7 +11987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1182135128590296473
 Transform:
   m_ObjectHideFlags: 0
@@ -14065,10 +13947,12 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
-  iconUrl: 
-  description: 
+  iconUrl: comment-dots-solid
+  description: "\u0413\u043E\u0432\u043E\u0440\u044E \u0432\u0441\u043B\u0443\u0445,
+    \u043D\u043E \u0438\u043D\u043E\u0433\u0434\u0430 \u0433\u043B\u043E\u0442\u0430\u044E
+    \u0441\u043B\u043E\u0432\u0430"
   website: 
-  occupantCategory: 10000
+  occupantCategory: 6
   displayPoint_: {x: -6.4702625, y: -3.1260815}
 --- !u!1 &5638279428513291937
 GameObject:
@@ -18444,7 +18328,7 @@ GameObject:
   - component: {fileID: 2839981833337384832}
   - component: {fileID: 8423377959047279114}
   m_Layer: 0
-  m_Name: "auditorium_\u041B\u0435\u043A\u0442\u043E\u0440\u0438\u0439"
+  m_Name: "auditorium_\u041A\u0438\u043D\u043E\u0442\u0435\u0430\u0442\u0440"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18584,10 +18468,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041B\u0435\u043A\u0442\u043E\u0440\u0438\u0439"
+    ru: "\u041A\u0438\u043D\u043E\u0442\u0435\u0430\u0442\u0440"
     en: 
   altName:
-    ru: "\u041B\u0435\u043A\u0442\u043E\u0440\u0438\u0439"
+    ru: "\u041A\u0438\u043D\u043E\u0442\u0435\u0430\u0442\u0440"
     en: 
   category: 0
   restriction: 2
@@ -18595,7 +18479,10 @@ MonoBehaviour:
   address: {fileID: 0}
   generateOccupant: 1
   iconUrl: 
-  description: 
+  description: "\u0424\u0430\u043A\u0443\u043B\u044C\u0442\u0435\u0442 \u0443\u0441\u0442\u043E\u0439\u0447\u0438\u0432\u043E\u0433\u043E
+    \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044F \u0438 \u0431\u0435\u0440\u0435\u0436\u043D\u043E\u0433\u043E
+    \u043E\u0442\u043D\u043E\u0448\u0435\u043D\u0438\u044F \u043A \u043F\u0438\u0440\u043E\u0434\u0435\n\n100
+    \u043C\u0435\u0441\u0442"
   website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: 0}
@@ -21727,7 +21614,7 @@ MonoBehaviour:
   iconUrl: 
   description: 
   website: 
-  occupantCategory: 4
+  occupantCategory: 16
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8886653669489169876
 GameObject:
