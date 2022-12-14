@@ -9932,7 +9932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7170615415676093687
 Transform:
   m_ObjectHideFlags: 0
@@ -12671,7 +12671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1182135128590296473
 Transform:
   m_ObjectHideFlags: 0
@@ -17456,7 +17456,7 @@ GameObject:
   - component: {fileID: 3385340450606718439}
   - component: {fileID: 7054396442512868969}
   m_Layer: 0
-  m_Name: "room_\u0421\u041A\u0421 \u041F\u0440\u043E\u0432\u0441\u043E\u044E\u0437\u0430"
+  m_Name: "room_\u0421\u041A\u0421 \u041F\u0440\u043E\u0444\u0441\u043E\u044E\u0437\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17596,10 +17596,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u0421\u041A\u0421 \u041F\u0440\u043E\u0432\u0441\u043E\u044E\u0437\u0430"
+    ru: "\u0421\u041A\u0421 \u041F\u0440\u043E\u0444\u0441\u043E\u044E\u0437\u0430"
     en: 
   altName:
-    ru: "\u0421\u041A\u0421 \u041F\u0440\u043E\u0432\u0441\u043E\u044E\u0437\u0430"
+    ru: "\u0421\u041A\u0421 \u041F\u0440\u043E\u0444\u0441\u043E\u044E\u0437\u0430"
     en: 
   category: 46
   restriction: 2
