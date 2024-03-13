@@ -51,6 +51,7 @@ MonoBehaviour:
   neighbors:
   - {fileID: 5905749913478709668}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &2134642426465957056
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +615,7 @@ MonoBehaviour:
   - {fileID: 1803732969092930133}
   - {fileID: 1027491354734738059}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &6431318608999649109
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +668,7 @@ MonoBehaviour:
   - {fileID: 3351468705069546070}
   - {fileID: 5905749913478709668}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &6734222786325393725
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +723,7 @@ MonoBehaviour:
   associatedFeatures:
   - {fileID: 8945711561604158454}
   - {fileID: 491261427793781350}
+  forceBiDirectional: 0
 --- !u!1 &7074533556910287145
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +776,7 @@ MonoBehaviour:
   - {fileID: 3931484893394872950}
   - {fileID: 1803732969092930133}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &7827986682377905614
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +829,7 @@ MonoBehaviour:
   - {fileID: 1027491354734738059}
   - {fileID: 1019715847749481761}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &8345249428434872553
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +881,7 @@ MonoBehaviour:
   neighbors:
   - {fileID: 4603933952228713021}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &8376685368618114821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1162,7 @@ MonoBehaviour:
   neighbors:
   - {fileID: 8973245042638391910}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &8676480180019455606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1216,7 @@ MonoBehaviour:
   - {fileID: 3351468705069546070}
   - {fileID: 4603933952228713021}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1001 &7923009043679853136
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1447,7 +1447,7 @@ namespace IMDF.Feature
             {
                 this.neighbours = node.neighbors.Select(t => t.guid).ToArray();
                 level_id = node.GetComponentInParent<IMDF.Level>(true)?.guid;
-                builing_id = node.GetComponentInParent<IMDF.Building>(true)?.guid;
+                builing_id = level_id != null ? node.GetComponentInParent<IMDF.Building>(true)?.guid : null;
                 weight = node.weight;
 
                 List<Tag> tags = new List<Tag>();
@@ -1651,11 +1651,12 @@ namespace IMDF.Feature
             var dict = featuresType.ToDictionary(t => t.Item2, t => t.Item1);
 
             byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(dict));
-            request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-            request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", "application/json");
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
 
+            request.SetRequestHeader("Content-Type", "application/json");
             request.SetRequestHeader("authorization", "Bearer " + password);
+
 
             EditorCoroutineUtility.StartCoroutine(Send(request), obj);
         }

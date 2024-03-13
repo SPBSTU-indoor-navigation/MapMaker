@@ -405,6 +405,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2514124965016229545
@@ -549,6 +552,7 @@ MonoBehaviour:
   - {fileID: 2878059680274927294}
   associatedFeatures:
   - {fileID: 7848350815122830381}
+  forceBiDirectional: 0
 --- !u!1 &3725203515774326906
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +735,7 @@ MonoBehaviour:
   - {fileID: 862691791129875817}
   - {fileID: 6418760260706419233}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &5023634069410667978
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +787,7 @@ MonoBehaviour:
   neighbors:
   - {fileID: 1480395173288954839}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &5048002155474255628
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +957,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5812998428901847928
@@ -1006,6 +1015,7 @@ MonoBehaviour:
   - {fileID: 2205114339037002248}
   associatedFeatures:
   - {fileID: 2392083818997517575}
+  forceBiDirectional: 0
 --- !u!1 &6608819154322267966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,6 +1068,7 @@ MonoBehaviour:
   - {fileID: 2205114339037002248}
   - {fileID: 327229063448279906}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &7098114832690876035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1121,7 @@ MonoBehaviour:
   - {fileID: 862691791129875817}
   - {fileID: 7378158628440001331}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &7478372811307682231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1209,7 @@ MonoBehaviour:
   - {fileID: 1480395173288954839}
   - {fileID: 7862829838478402130}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &8347274960814503087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1589,7 @@ MonoBehaviour:
   neighbors:
   - {fileID: 7378158628440001331}
   associatedFeatures: []
+  forceBiDirectional: 0
 --- !u!1 &9104973840402416914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1757,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &9213330159359029054

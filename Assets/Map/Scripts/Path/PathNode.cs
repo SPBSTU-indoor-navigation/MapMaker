@@ -14,7 +14,9 @@ public class PathNode : IMDF.GeometryPoint
     [Space]
     public List<PathNode> neighbors = new List<PathNode>();
     public List<IMDF.FeatureMB> associatedFeatures = new List<IMDF.FeatureMB>();
+    [Space]
 
+    public bool forceBiDirectional = false;
 
 
     private void Start()
@@ -65,5 +67,16 @@ public class PathNode : IMDF.GeometryPoint
     public void Fix()
     {
         neighbors = neighbors.Where(t => t != null && t != this).ToList();
+
+        if (forceBiDirectional)
+        {
+            neighbors.ForEach(t =>
+            {
+                if (t.neighbors.Find(t => t == this) == null)
+                {
+                    t.neighbors.Add(this);
+                }
+            });
+        }
     }
 }

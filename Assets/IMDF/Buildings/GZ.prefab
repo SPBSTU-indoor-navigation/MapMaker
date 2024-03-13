@@ -166,6 +166,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &24554468999323917
@@ -338,6 +341,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 8
   displayPoint_: {x: -0.059661865, y: -4.8395386}
 --- !u!1 &38638306446405065
@@ -652,6 +658,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: -6.180359}
 --- !u!1 &53721550225618203
@@ -821,6 +830,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &86152941369457593
@@ -1736,6 +1748,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: -0.36999512, y: 11.540009}
 --- !u!1 &274695251456369454
@@ -1905,6 +1920,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &293522119834773463
@@ -2267,6 +2285,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &399840438723351598
@@ -3164,6 +3185,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &523325563823338065
@@ -3565,6 +3589,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &566787751555286714
@@ -3734,6 +3761,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &599607593641218873
@@ -3903,6 +3933,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &610706984662805425
@@ -4072,6 +4105,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &656934493920914734
@@ -4740,6 +4776,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &737847537378466358
@@ -4909,6 +4948,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &758946320367276373
@@ -5588,6 +5630,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: -0.36999512, y: 11.540009}
 --- !u!1 &939007356189754470
@@ -5757,6 +5802,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &951326028572442694
@@ -6047,6 +6095,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &995444653309750098
@@ -6394,6 +6445,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1091751443139165163
@@ -7069,6 +7123,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 3
   displayPoint_: {x: -2.4999847, y: 7.2500076}
 --- !u!1 &1310616476586825186
@@ -7238,6 +7295,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: -0.25, y: -10.499992}
 --- !u!1 &1324386470313991958
@@ -7407,6 +7467,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1336129217487929101
@@ -7576,6 +7639,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 5
   displayPoint_: {x: -0.06409836, y: -3.9576492}
 --- !u!1 &1340774305205541974
@@ -8007,6 +8073,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1426325157208508587
@@ -8280,6 +8349,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 3
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1494673506666217972
@@ -8540,6 +8612,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 8
   displayPoint_: {x: 0, y: -4.89917}
 --- !u!1 &1503861709081082548
@@ -8761,6 +8836,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1551515758976145582
@@ -9430,6 +9508,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1640485473893173015
@@ -9599,6 +9680,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1653695266448328277
@@ -9776,6 +9860,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 3.8852844}
 --- !u!1 &1659538023499163494
@@ -10591,6 +10678,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 11
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1733081017051451139
@@ -10938,6 +11028,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: -0.36999512, y: 11.540009}
 --- !u!1 &1796140865798149321
@@ -11387,6 +11480,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1889805590654650530
@@ -11559,6 +11655,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 6
   displayPoint_: {x: -0.02201271, y: -6.4277573}
 --- !u!1 &1892496170817715721
@@ -11906,6 +12005,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &1957339357615702500
@@ -12748,6 +12850,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2152986483382096565
@@ -12922,6 +13027,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 3.7576904}
 --- !u!1 &2161672894816444886
@@ -13090,6 +13198,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2171284896084766757
@@ -13400,6 +13511,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0.125, y: -4}
 --- !u!1 &2225701725464305827
@@ -13798,6 +13912,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2246087571253770736
@@ -14413,6 +14530,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2341856685876863992
@@ -14725,6 +14845,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 3
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2432583213902871943
@@ -15035,6 +15158,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 3
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2447383644038883045
@@ -15450,6 +15576,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2549401550699435236
@@ -16017,6 +16146,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2601937220372242854
@@ -16275,6 +16407,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2686023037732456819
@@ -16444,6 +16579,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &2686824285540069795
@@ -17589,6 +17727,8 @@ MonoBehaviour:
     ru: "\u0411\u0443\u043B\u044C\u0432\u0430\u0440"
     en: 
   category: 6
+  description: 
+  iconUrl: 
   address: {fileID: 11400000, guid: b1071de5df6cb4183bb46b8ab7fbe9f3, type: 2}
   hours: 
   phone: +7 (812) 555-42-81
@@ -17971,6 +18111,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: -0.36999512, y: 11.540009}
 --- !u!1 &3195386555272428716
@@ -18677,6 +18820,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3423490380241791735
@@ -18935,6 +19081,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3431925239681044331
@@ -19255,6 +19404,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3467591920802879209
@@ -19516,6 +19668,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: -2.9999847, y: 1.7500076}
 --- !u!1 &3495725073301118165
@@ -19685,6 +19840,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 7
   displayPoint_: {x: -0.06925964, y: -2.409668}
 --- !u!1 &3505118918421654705
@@ -19854,6 +20012,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3513780876237157888
@@ -20027,6 +20188,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: -6.8547254}
 --- !u!1 &3520942202557887357
@@ -20807,6 +20971,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3647157717944852646
@@ -21028,6 +21195,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3664595955312764614
@@ -21540,6 +21710,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3804168206973050185
@@ -21864,6 +22037,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3900899805531739764
@@ -22033,6 +22209,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: -0.2286377, y: 1.0791321}
 --- !u!1 &3923052469007220725
@@ -22202,6 +22381,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3925948945205208816
@@ -22550,6 +22732,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &3993632320838894586
@@ -22772,6 +22957,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4006180867080762180
@@ -23044,6 +23232,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 3
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4139102058162759501
@@ -23355,6 +23546,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4206299192595071206
@@ -23797,6 +23991,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4229434862186786194
@@ -24018,6 +24215,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4341039573328103708
@@ -24186,6 +24386,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4368276019653733503
@@ -24407,6 +24610,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4373834354102430789
@@ -25009,6 +25215,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4470876621510021458
@@ -25185,6 +25394,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: -2.9999847, y: 1.7500076}
 --- !u!1 &4481029261487908180
@@ -25682,6 +25894,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0.5, y: 1.583313}
 --- !u!1 &4634736302553790709
@@ -25851,6 +26066,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4657225091742917375
@@ -26020,6 +26238,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4675954564539244153
@@ -26278,6 +26499,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: -0.36999512, y: 11.540009}
 --- !u!1 &4698515362523060187
@@ -26480,6 +26704,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: -2.9999847, y: 1.7500076}
 --- !u!1 &4702421145185141442
@@ -26833,6 +27060,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: -6.119934}
 --- !u!1 &4718767060592692408
@@ -27091,6 +27321,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4755570462085918818
@@ -27260,6 +27493,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4792153458699658501
@@ -27430,6 +27666,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4794361863575508506
@@ -27688,6 +27927,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4880788388382227844
@@ -27858,6 +28100,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4881752106591153521
@@ -28120,6 +28365,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: -6.8547254}
 --- !u!1 &4915769128784379265
@@ -28378,6 +28626,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4944304729838953620
@@ -28780,6 +29031,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &4993417302061510988
@@ -29001,6 +29255,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5026789701533330099
@@ -29690,6 +29947,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5217013887780145031
@@ -30263,6 +30523,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: -2.9999847, y: 1.7500076}
 --- !u!1 &5298578570908472619
@@ -30433,6 +30696,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: -2.9999847, y: 1.7500076}
 --- !u!1 &5305015904224847363
@@ -30603,6 +30869,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5305638599561831212
@@ -30914,6 +31183,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 11
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5335445858460781068
@@ -31083,6 +31355,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5341488545943123390
@@ -31504,6 +31779,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 1.5, y: -0.75}
 --- !u!1 &5508583293748787461
@@ -31762,6 +32040,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: -0.36999512, y: 11.540009}
 --- !u!1 &5545088968087245186
@@ -32677,6 +32958,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: -2.9999847, y: 1.7500076}
 --- !u!1 &5659805917969398218
@@ -32852,6 +33136,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5681014085454644952
@@ -33072,6 +33359,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5681394288379077265
@@ -33300,6 +33590,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5697859959307151990
@@ -33470,6 +33763,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 1
   displayPoint_: {x: -0.99998474, y: 0.0000076293945}
 --- !u!1 &5718948927112129240
@@ -33639,6 +33935,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5724872973043513564
@@ -33810,6 +34109,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: -2.9999847, y: 1.7500076}
 --- !u!1 &5728263551186491651
@@ -34068,6 +34370,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &5769860089641918039
@@ -35282,6 +35587,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 1
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6108719300545166867
@@ -35934,6 +36242,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: -6.180359}
 --- !u!1 &6119947644329022807
@@ -36439,6 +36750,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6216493270570033999
@@ -36608,6 +36922,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6235348625764772142
@@ -36955,6 +37272,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6303082653511855692
@@ -37636,6 +37956,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: -2.9999847, y: 1.7500076}
 --- !u!1 &6425033279865196820
@@ -37983,6 +38306,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 1.75, y: 0}
 --- !u!1 &6458862619521197864
@@ -38152,6 +38478,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6501737207673226927
@@ -38321,6 +38650,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: -0.2286377, y: 1.0791321}
 --- !u!1 &6521466632083993497
@@ -38490,6 +38822,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 1.5, y: -0.75}
 --- !u!1 &6523356735295083456
@@ -38754,6 +39089,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: -6.119934}
 --- !u!1 &6570599054224087027
@@ -38923,6 +39261,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6592971796047954285
@@ -39092,6 +39433,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: -0.17726135, y: -5.6274185}
 --- !u!1 &6599540743711716244
@@ -39261,6 +39605,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6641049343047446969
@@ -39430,6 +39777,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: -0.33232117, y: 0.23259735}
 --- !u!1 &6675567990773446881
@@ -39880,6 +40230,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6757692558765703420
@@ -40597,6 +40950,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6888093083329373187
@@ -40766,6 +41122,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6915792692625371769
@@ -41113,6 +41472,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6958802347105551108
@@ -41282,6 +41644,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &6961469610862541644
@@ -41594,6 +41959,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7000026468814795590
@@ -41763,6 +42131,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 1.5, y: -0.75}
 --- !u!1 &7006831050539560806
@@ -41931,6 +42302,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7008167465139343066
@@ -42100,6 +42474,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7015641078827392079
@@ -42834,6 +43211,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7122688667261446149
@@ -43007,6 +43387,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7269651100207864620
@@ -43401,6 +43784,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 3.875, y: 0}
 --- !u!1 &7386459418324081760
@@ -43575,6 +43961,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 3.7576904}
 --- !u!1 &7407078459270203470
@@ -43796,6 +44185,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7444707186559425787
@@ -44054,6 +44446,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: -0.25, y: -10.499992}
 --- !u!1 &7502852231170194878
@@ -44223,6 +44618,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7559617675443727182
@@ -44837,6 +45235,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 3
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7743100996093985741
@@ -45096,6 +45497,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7760353509033631575
@@ -45265,6 +45669,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &7783375563757521526
@@ -46119,6 +46526,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8019158195175100971
@@ -46289,6 +46699,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8026441594618757475
@@ -47573,6 +47986,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 3.8852844}
 --- !u!1 &8230414376424106109
@@ -47741,6 +48157,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8244390153102882128
@@ -47999,6 +48418,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10
   displayPoint_: {x: 0.04371339, y: -0.39543456}
 --- !u!1 &8251463721531766210
@@ -48217,6 +48639,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: -0.25, y: -3.4999924}
 --- !u!1 &8254989333217504542
@@ -48386,6 +48811,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8262869253628415634
@@ -48704,6 +49132,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8333391968170119305
@@ -48874,6 +49305,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8358200881751711821
@@ -49132,6 +49566,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8383456635906481692
@@ -49531,6 +49968,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10
   displayPoint_: {x: -0.41799927, y: 1.35849}
 --- !u!1 &8408447691066025901
@@ -49841,6 +50281,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8441166148668309976
@@ -50010,6 +50453,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8448984610867474591
@@ -50179,6 +50625,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8471827406502096733
@@ -50400,6 +50849,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8486202809791629922
@@ -50569,6 +51021,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8489574918940462580
@@ -50740,6 +51195,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8496499174074316222
@@ -51051,6 +51509,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 3.4891815, y: 0.13292694}
 --- !u!1 &8566017872600218988
@@ -51555,6 +52016,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8608860394092719084
@@ -51724,6 +52188,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8623673837294261394
@@ -51893,6 +52360,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 0
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8636413696369145648
@@ -52063,6 +52533,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8660299152218415078
@@ -52321,6 +52794,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8675647097450718700
@@ -52489,6 +52965,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8703791079355899143
@@ -52747,6 +53226,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 1.5, y: -0.75}
 --- !u!1 &8721747606524212850
@@ -53947,6 +54429,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8952286784044312476
@@ -54175,6 +54660,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8966098757496888696
@@ -54344,6 +54832,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8972866056988431514
@@ -54568,6 +55059,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &8995569020571078992
@@ -54737,6 +55231,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &9009883918787500766
@@ -54906,6 +55403,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0.125, y: -0.75}
 --- !u!1 &9017330836751362016
@@ -55165,6 +55665,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &9064069577757558662
@@ -55334,6 +55837,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &9095449909249649524
@@ -55738,6 +56244,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 0
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 10000
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &9177714963826840433
@@ -55907,6 +56416,9 @@ MonoBehaviour:
   showDisplayPoint: 1
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &9197067319510656055
@@ -56127,6 +56639,9 @@ MonoBehaviour:
   showDisplayPoint: 0
   address: {fileID: 0}
   generateOccupant: 1
+  iconUrl: 
+  description: 
+  website: 
   occupantCategory: 2
   displayPoint_: {x: 0, y: 0}
 --- !u!1 &9210045870448239178
