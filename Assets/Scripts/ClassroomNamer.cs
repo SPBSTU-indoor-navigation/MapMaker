@@ -12,6 +12,26 @@ public class ClassroomNamer : MonoBehaviour
     public string templateRU = "";
     public string templateEN = "";
 
+    [HideInInspector]
+    public Dictionary<Category, string> dictRU = new() {
+            { Category.classroom, "Кабинет {name}" },
+            { Category.laboratory, "Лабораторная {name}" },
+            { Category.auditorium, "Лекторий {name}" },
+            { Category.restroomFemale, "Туалет женский" },
+            { Category.restroomMale, "Туалет мужской" },
+        };
+
+
+    [HideInInspector]
+    public Dictionary<Category, string> dictEN = new() {
+            { Category.classroom, "Classroom {name}" },
+            { Category.laboratory, "Lab {name}" },
+            { Category.auditorium, "Auditorium {name}" },
+            { Category.restroomFemale, "Restroom female" },
+            { Category.restroomMale, "Restroom male" },
+
+        };
+
     private void OnValidate()
     {
         var u = GetComponent<IMDF.Unit>();
@@ -20,24 +40,6 @@ public class ClassroomNamer : MonoBehaviour
 
         var ru = templateRU;
         var en = templateEN;
-
-
-        Dictionary<Category, string> dictRU = new Dictionary<Category, string> {
-            { Category.classroom, "Кабинет {name}" },
-            { Category.laboratory, "Лабораторная {name}" },
-            { Category.auditorium, "Лекторий {name}" },
-            { Category.restroomFemale, "Туалет женский" },
-            { Category.restroomMale, "Туалет мужской" },
-        };
-
-        Dictionary<Category, string> dictEN = new Dictionary<Category, string> {
-            { Category.classroom, "Classroom {name}" },
-            { Category.laboratory, "Lab {name}" },
-            { Category.auditorium, "Auditorium {name}" },
-            { Category.restroomFemale, "Restroom female" },
-            { Category.restroomMale, "Restroom male" },
-
-        };
 
         if (string.IsNullOrWhiteSpace(ru))
             dictRU.TryGetValue(u.occupantCategory, out ru);
@@ -59,7 +61,6 @@ public class ClassroomNamer : MonoBehaviour
 
         u.localizedName.ru = ru.Replace("{name}", name);
         u.localizedName.en = en.Replace("{name}", name);
-
         u.OnValidate();
 
     }

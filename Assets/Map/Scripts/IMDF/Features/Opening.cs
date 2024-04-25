@@ -36,7 +36,7 @@ namespace IMDF
         public bool single;
         public float distance = 1;
         [SerializeField]
-        private Transform[] pathNode;
+        public Transform[] pathNode;
 
         public Vector2 displayPoint
         {
