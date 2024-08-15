@@ -61,6 +61,14 @@ public class ErrorFixEditorWindow : EditorWindow
             .Where(c => c.Item1 != null)
             .Select(c => ($"ClassroomNamer: {c.Item1}", c.c as Object))
         );
+
+        var pathNodes = StageUtility.GetCurrentStageHandle().FindComponentsOfType<PathNode>();
+
+        problems.AddRange(
+            pathNodes
+            .Where(p => p.associatedFeatures.Where(f => !f).Any())
+            .Select(p => ($"PathNode {p.name} has empty associated feature", p as Object))
+        );
     }
 
     void OnGUI()
