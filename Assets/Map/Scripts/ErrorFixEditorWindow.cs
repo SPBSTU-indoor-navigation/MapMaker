@@ -69,6 +69,21 @@ public class ErrorFixEditorWindow : EditorWindow
             .Where(p => p.associatedFeatures.Where(f => !f).Any())
             .Select(p => ($"PathNode {p.name} has empty associated feature", p as Object))
         );
+
+
+        var units = StageUtility.GetCurrentStageHandle().FindComponentsOfType<IMDF.Unit>();
+        problems.AddRange(
+            units
+            .Where(u => u.category != IMDF.Feature.Unit.Category.unspecified && u.generateOccupant && u.occupantCategory == IMDF.Feature.Occupant.Category.unspecified)
+            .Select(u => ($"Unit {u.name} has unspecified category", u as Object))
+        );
+
+        var attractions = StageUtility.GetCurrentStageHandle().FindComponentsOfType<IMDF.Attraction>();
+        problems.AddRange(
+            attractions
+            .Where(a => a.building == null)
+            .Select(a => ($"Attraction {a.name} has empty path node", a as Object))
+        );
     }
 
     void OnGUI()

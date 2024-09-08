@@ -49,11 +49,14 @@ public class PathEditorOverlay : Overlay
     Vector2 lastMousePosRender = Vector2.zero;
     void OnSceneGUI(SceneView sceneView)
     {
+        var shouldRepaint = false;
         if (!enableToggle.value) return;
 
         Event e = Event.current;
 
         var nearestNode = NearestMouseNode();
+
+        // return;
 
         if (nearestNode != null)
         {
@@ -62,7 +65,7 @@ public class PathEditorOverlay : Overlay
             if (lastNearetPointOutline != nearestNode.transform)
             {
                 lastNearetPointOutline = nearestNode.transform;
-                SceneView.RepaintAll();
+                shouldRepaint = true;
             }
         }
 
@@ -135,6 +138,7 @@ public class PathEditorOverlay : Overlay
 
         if (e.isMouse && e.type == EventType.MouseDown && e.button == 0)
         {
+            e.Use();
             if (lineToggle.isEnabled)
             {
                 if (!lineStart)
@@ -190,6 +194,11 @@ public class PathEditorOverlay : Overlay
             }
         }
 
+        if (e.isMouse && e.type == EventType.MouseUp && e.button == 0)
+        {
+            e.Use();
+        }
+
         if (lineStart)
         {
             Handles.color = e.alt ? Color.red : Color.green;
@@ -197,23 +206,40 @@ public class PathEditorOverlay : Overlay
             {
                 Handles.DrawLine(lineStart.transform.position, mousePos);
 
-                var associeted = NearestAsscosieted();
-                if (associeted && e.alt)
+                if (e.alt)
                 {
-                    Handles.color = Color.gray;
-                    Handles.DrawLine(mousePos, associeted.transform.position);
+
+                    var associeted = NearestAsscosieted();
+                    if (associeted)
+                    {
+                        Handles.color = Color.gray;
+                        Handles.DrawLine(mousePos, associeted.transform.position);
+                    }
+                    else if (nearestNode)
+                    {
+                        Handles.DrawLine(mousePos, nearestNode.transform.position);
+                    }
                 }
-                else if ((e.alt && nearestNode) || NearestMouseNode(20))
+
+                var n20 = NearestMouseNode(20);
+                if (n20 && !e.alt)
                 {
-                    Handles.DrawLine(mousePos, (nearestNode ?? NearestMouseNode(20)).transform.position);
+                    Handles.color = Color.green;
+                    Handles.DrawLine(mousePos, n20.transform.position);
                 }
+
 
                 if (Vector2.Distance(lastMousePosRender, Event.current.mousePosition) > 5f)
                 {
                     lastMousePosRender = Event.current.mousePosition;
-                    SceneView.RepaintAll();
+                    shouldRepaint = true;
                 }
             }
+        }
+
+        if (shouldRepaint)
+        {
+            SceneView.RepaintAll();
         }
     }
 
@@ -297,10 +323,21 @@ public class PathEditorOverlay : Overlay
         if (TryGetMousePos(out Vector3 point))
         {
             var nodes = FindObjectsOfType<PathNode>();
-            return nodes.Where(t => t.isActiveAndEnabled)
-                        .OrderBy(t => (t.transform.position - point).sqrMagnitudeXY())
-                        .Where(t => (t.transform.position - point).sqrMagnitudeXY() < distance)
-                        .FirstOrDefault();
+            PathNode nearest = null;
+            var minDist = distance;
+
+            foreach (var item in nodes)
+            {
+                if (!item.isActiveAndEnabled) continue;
+                var dist = (item.transform.position - point).sqrMagnitudeXY();
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    nearest = item;
+                }
+            }
+
+            return minDist < 200 ? nearest : null;
         }
         return null;
     }
@@ -319,9 +356,23 @@ public class PathEditorOverlay : Overlay
                                                 .Where(t => t.hasOccupant)
                                                 .Select(t => t as IMDF.FeatureMB)
                                                 );
-            return fratures.OrderBy(t => (t.transform.position - point).sqrMagnitudeXY())
-                        .Where(t => (t.transform.position - point).sqrMagnitudeXY() < distance)
-                        .FirstOrDefault();
+            var filtered = fratures
+                        .Where(t => (t.transform.position - point).sqrMagnitudeXY() < distance);
+
+            var minDist = distance;
+            IMDF.FeatureMB nearestNode = null;
+
+            foreach (var item in filtered)
+            {
+                var dist = (item.transform.position - point).sqrMagnitudeXY();
+                if (dist < minDist)
+                {
+                    minDist = dist;
+                    nearestNode = item;
+                }
+            }
+
+            return nearestNode;
         }
         return null;
     }

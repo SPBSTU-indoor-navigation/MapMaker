@@ -54,5 +54,5 @@
     },
     "editor.tabSize": 4,
     "omnisharp.useGlobalMono": "always",
-    "dotnet.defaultSolution": "MapMaker-dev.sln"
+    "dotnet.defaultSolution": "MapMaker.sln"
 }

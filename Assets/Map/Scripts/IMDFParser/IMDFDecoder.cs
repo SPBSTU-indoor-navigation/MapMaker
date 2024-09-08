@@ -1124,6 +1124,7 @@ namespace IMDF.Feature
             security = 7,
             wardrobe = 8,
             restroom = 9,
+            [EnumMember(Value = "restroom.wheelchair")] restroomWheelchair = 21,
             [EnumMember(Value = "restroom.female")] restroomFemale = 10,
             [EnumMember(Value = "restroom.male")] restroomMale = 11,
             ticket = 12,
@@ -1132,7 +1133,7 @@ namespace IMDF.Feature
             archive = 15,
             [EnumMember(Value = "reading.room")] readingRoom = 16,
             [EnumMember(Value = "academic.council")] academicCouncil = 17,
-            information = 18,
+            information = 22,
             photobooth = 19,
             firstaid = 20,
 

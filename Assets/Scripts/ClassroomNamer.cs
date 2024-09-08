@@ -19,6 +19,7 @@ public class ClassroomNamer : MonoBehaviour
             { Category.auditorium, "Лекторий {name}" },
             { Category.restroomFemale, "Туалет женский" },
             { Category.restroomMale, "Туалет мужской" },
+            { Category.unspecified, "Кабинет {name}" },
         };
 
 
@@ -29,6 +30,7 @@ public class ClassroomNamer : MonoBehaviour
             { Category.auditorium, "Auditorium {name}" },
             { Category.restroomFemale, "Restroom female" },
             { Category.restroomMale, "Restroom male" },
+            { Category.unspecified, "Cabinet {name}" },
 
         };
 
