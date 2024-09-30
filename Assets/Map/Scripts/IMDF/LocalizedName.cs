@@ -1,13 +1,18 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace IMDF
 {
-    [System.Serializable]
-    public class LocalizedName
-    {
-        public string ru, en;
 
-        public Feature.LocalizedName getFeature()
+    public interface ILocalizedName
+    {
+        public Feature.LocalizedName getFeature();
+        public bool IsEmpty();
+    }
+
+    public abstract class LocalizedNameBase : ILocalizedName
+    {
+        protected Feature.LocalizedName getFeature(string ru, string en)
         {
             if (string.IsNullOrWhiteSpace(ru) && string.IsNullOrWhiteSpace(en))
             {
@@ -25,9 +30,46 @@ namespace IMDF
             return new Feature.LocalizedName(local);
         }
 
-        public bool IsEmpty()
+        public bool IsEmpty(string ru, string en)
         {
             return string.IsNullOrWhiteSpace(ru) && string.IsNullOrWhiteSpace(en);
+        }
+
+        public abstract Feature.LocalizedName getFeature();
+        public abstract bool IsEmpty();
+    }
+
+
+    [System.Serializable]
+    public class LocalizedName : LocalizedNameBase
+    {
+        public string ru, en;
+
+        public override Feature.LocalizedName getFeature()
+        {
+            return getFeature(ru, en);
+        }
+
+        public override bool IsEmpty()
+        {
+            return IsEmpty(ru, en);
+        }
+    }
+
+    [System.Serializable]
+    public class LocalizedNameMultiline : LocalizedNameBase
+    {
+        [TextArea(1, 10)]
+        public string ru, en;
+
+        public override Feature.LocalizedName getFeature()
+        {
+            return getFeature(ru, en);
+        }
+
+        public override bool IsEmpty()
+        {
+            return IsEmpty(ru, en);
         }
     }
 

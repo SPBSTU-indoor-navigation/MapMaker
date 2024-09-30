@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4769333142825644630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3209028068708951396}
+  - component: {fileID: 3331942848559039826}
+  m_Layer: 0
+  m_Name: Attraction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3209028068708951396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4769333142825644630}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -48, y: 6.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3331942848559039826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4769333142825644630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d8018407c7f4b169e60428b44215a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 
+  category: 0
+  localizedName:
+    ru: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u043A\u043E\u0440\u043F\u0443\u0441
+      \u21161"
+    en: 1
+  altName:
+    ru: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u043A\u043E\u0440\u043F\u0443\u0441
+      \u21161"
+    en: 1
+  shortName:
+    ru: 1
+    en: 1
+  image: 
+  building: {fileID: 0}
+  authors:
+    enbled: 1
+    shortText:
+      ru: "\u041F\u043B\u0430\u043D\u0438\u0440\u043E\u0432\u043A\u0430 \u044D\u0442\u043E\u0433\u043E
+        \u0437\u0434\u0430\u043D\u0438\u044F \u0431\u044B\u043B\u0430 \u043F\u0435\u0440\u0435\u043D\u0435\u0441\u0435\u043D\u0430
+        \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u0430\u043C\u0438 \u0421\u041F\u0431\u041F\u0423
+        \u0432 \u0440\u0430\u043C\u043A\u0430\u0445 \u043A\u0443\u0440\u0441\u0430
+        \u041E\u041F\u0414 2024."
+      en: The layout of this building was transferred by students of SPBSTU as part
+        of the 2024 Fundamentals of Project Activity course.
+    title:
+      ru: "\u0423\u0447\u0430\u0441\u0442\u043D\u0438\u043A\u0438 \u043E\u0442\u0440\u0438\u0441\u043E\u0432\u043A\u0438
+        1-2 \u0443\u0447\u0435\u0431\u043D\u043E\u0433\u043E \u043A\u043E\u0440\u043F\u0443\u0441\u0430"
+      en: Team of 1st and 2nd academic buildings
+    description:
+      ru: "\u041F\u043B\u0430\u043D\u0438\u0440\u043E\u0432\u043A\u0430 \u044D\u0442\u043E\u0433\u043E
+        \u0437\u0434\u0430\u043D\u0438\u044F \u043F\u0435\u0440\u0435\u043D\u0435\u0441\u0435\u043D\u0430
+        \u0432 PolyMap \u0441\u0442\u0443\u0434\u0435\u043D\u0442\u0430\u043C\u0438
+        \u0421\u0430\u043D\u043A\u0442-\u041F\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0441\u043A\u043E\u0433\u043E
+        \u041F\u043E\u043B\u0438\u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u043E\u0433\u043E
+        \u0423\u043D\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0430
+        \u0432 \u0440\u0430\u043C\u043A\u0430\u0445 \u043A\u0443\u0440\u0441\u0430
+        \u041E\u0441\u043D\u043E\u0432\u044B \u041F\u0440\u043E\u0435\u043A\u0442\u043D\u043E\u0439
+        \u0414\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438
+        2024 \u0433\u043E\u0434\u0430.\n\n\u0427\u043B\u0435\u043D\u044B \u043A\u043E\u043C\u0430\u043D\u0434\u044B
+        \u043F\u0435\u0440\u0435\u043D\u0435\u0441\u043B\u0438 \u0438\u043D\u0436\u0435\u043D\u0435\u0440\u043D\u044B\u0435
+        \u043F\u043B\u0430\u043D\u044B \u0432 \u0446\u0438\u0444\u0440\u043E\u0432\u043E\u0439
+        \u0444\u043E\u0440\u043C\u0430\u0442, \u043F\u0440\u043E\u043B\u043E\u0436\u0438\u043B\u0438
+        \u0433\u0440\u0430\u0444 \u043C\u0430\u0440\u0448\u0440\u0443\u0442\u043E\u0432
+        \u0438 \u0440\u0430\u0441\u0441\u0442\u0430\u0432\u0438\u043B\u0438 \u0430\u043D\u043D\u043E\u0442\u0430\u0446\u0438\u0438
+        \u0441 \u0430\u043A\u0442\u0443\u0430\u043B\u044C\u043D\u044B\u043C\u0438
+        \u043D\u043E\u043C\u0435\u0440\u0430\u043C\u0438 \u043A\u0430\u0431\u0438\u043D\u0435\u0442\u043E\u0432."
+      en: 'The layout of this building was transferred to PolyMap by students of
+        Peter the Great St. Petersburg Polytechnic University as part of the 2024
+        Fundamentals of Project Activity course.
+
+
+        The team members digitized
+        the engineering plans, mapped the route graph, and added annotations with
+        current room numbers.'
+    authorsTitle:
+      ru: "\u041A\u043E\u043C\u0430\u043D\u0434\u0430"
+      en: Team
+    authors:
+    - ru: "\u0414\u043E\u043B\u0436\u0435\u043D\u043A\u043E\u0432\u0430 \u0421\u043E\u0444\u044C\u044F
+        \u0410\u043B\u0435\u043A\u0441\u0435\u0435\u0432\u043D\u0430"
+      en: Name 1
+    - ru: "\u041C\u0430\u0440\u044E\u0444\u0438\u043D \u0418\u043B\u044C\u044F \u0418\u0433\u043E\u0440\u0435\u0432\u0438\u0447"
+      en: Name 2
+    - ru: "\u041C\u0435\u043B\u044C\u043D\u0438\u043A\u043E\u0432\u0430 \u0412\u0438\u043A\u0442\u043E\u0440\u0438\u044F
+        \u041C\u0430\u043A\u0441\u0438\u043C\u043E\u0432\u043D\u0430"
+      en: Name 3
+    - ru: "\u0421\u0438\u043D\u0451\u0432 \u0415\u0432\u0433\u0435\u043D\u0438\u0439
+        \u0412\u043B\u0430\u0434\u0438\u043C\u0438\u0440\u043E\u0432\u0438\u0447"
+      en: Name 4
+    - ru: "\u0421\u0430\u0439\u0434\u0430\u043A\u043E\u0432\u0441\u043A\u0438\u0439
+        \u041C\u0438\u0445\u0430\u0438\u043B \u0420\u043E\u043C\u0430\u043D\u043E\u0432\u0438\u0447"
+      en: Name 4

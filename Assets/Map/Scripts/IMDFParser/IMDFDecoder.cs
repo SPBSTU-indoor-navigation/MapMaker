@@ -1271,6 +1271,34 @@ namespace IMDF.Feature
             building
         }
 
+        public class Authors
+        {
+            public class Detail
+            {
+                public LocalizedName title;
+                public LocalizedName description;
+                public LocalizedName authors_title;
+                public LocalizedName[] authors;
+            }
+
+            public LocalizedName short_info;
+            public Detail detail;
+
+            public Authors(IMDF.Attraction attraction)
+            {
+                short_info = attraction.authors.shortText.getFeature();
+                detail = new Detail
+                {
+                    title = attraction.authors.title.getFeature(),
+                    description = attraction.authors.description.getFeature(),
+                    authors_title = attraction.authors.authorsTitle.getFeature(),
+                    authors = attraction.authors.authors.Select(t => t.getFeature()).ToArray()
+                };
+            }
+
+            public Authors() { }
+        }
+
         public class Properties
         {
             public Category category;
@@ -1279,6 +1307,7 @@ namespace IMDF.Feature
             public LocalizedName alt_name;
             public LocalizedName short_name;
             public string image;
+            public Authors authors;
 
             public Guid building_id;
 
@@ -1290,6 +1319,9 @@ namespace IMDF.Feature
                 short_name = attraction.shortName.getFeature();
                 building_id = attraction.building.guid;
                 image = string.IsNullOrWhiteSpace(attraction.image) ? null : attraction.image;
+
+
+                authors = attraction.authors.enbled ? new Authors(attraction) : null;
             }
         }
 

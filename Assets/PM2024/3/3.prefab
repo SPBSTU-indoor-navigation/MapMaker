@@ -704,6 +704,21 @@ MonoBehaviour:
     en: 3
   image: 
   building: {fileID: 551546959718588285}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &1977184003205899390
 GameObject:
   m_ObjectHideFlags: 0

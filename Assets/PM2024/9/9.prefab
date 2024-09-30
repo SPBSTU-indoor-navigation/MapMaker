@@ -497,17 +497,32 @@ MonoBehaviour:
   category: 0
   localizedName:
     ru: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u043A\u043E\u0440\u043F\u0443\u0441
-      \u211611"
+      \u21169"
     en: 
   altName:
     ru: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u043A\u043E\u0440\u043F\u0443\u0441
-      \u211611"
+      \u21169"
     en: 
   shortName:
-    ru: 11
-    en: 11
+    ru: 9
+    en: 9
   image: 
   building: {fileID: 551546959718588285}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &2028706415652566352
 GameObject:
   m_ObjectHideFlags: 0

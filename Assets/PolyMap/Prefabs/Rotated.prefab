@@ -15772,6 +15772,21 @@ MonoBehaviour:
     en: 6
   image: 
   building: {fileID: 8314129077352224380}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &708959126733337499
 GameObject:
   m_ObjectHideFlags: 0
@@ -16461,6 +16476,21 @@ MonoBehaviour:
     en: M
   image: 
   building: {fileID: 3412246804882393637}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &744093422820311414
 GameObject:
   m_ObjectHideFlags: 0
@@ -25719,6 +25749,21 @@ MonoBehaviour:
     en: 4
   image: 
   building: {fileID: 4154299254689604190}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &1223241726432999692
 GameObject:
   m_ObjectHideFlags: 0
@@ -38434,6 +38479,21 @@ MonoBehaviour:
     en: "\u0421"
   image: 
   building: {fileID: 4154299254689604190}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &1905966705275154859
 GameObject:
   m_ObjectHideFlags: 0
@@ -53032,6 +53092,21 @@ MonoBehaviour:
     en: 
   image: Gydro
   building: {fileID: 672231072120119760}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &2724717250838020880
 GameObject:
   m_ObjectHideFlags: 0
@@ -70832,6 +70907,21 @@ MonoBehaviour:
     en: 5
   image: 
   building: {fileID: 7151302893209277713}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &3743423608890132258
 GameObject:
   m_ObjectHideFlags: 0
@@ -84398,6 +84488,21 @@ MonoBehaviour:
     en: L
   image: 
   building: {fileID: 6129014417818639741}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &4467860814369683229
 GameObject:
   m_ObjectHideFlags: 0
@@ -94679,6 +94784,21 @@ MonoBehaviour:
     en: 10
   image: 
   building: {fileID: 8314129077352224380}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &5057401122758062961
 GameObject:
   m_ObjectHideFlags: 0
@@ -129516,6 +129636,21 @@ MonoBehaviour:
     en: SF
   image: 
   building: {fileID: 6093854641737836754}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &6870598962129368054
 GameObject:
   m_ObjectHideFlags: 0
@@ -156348,6 +156483,21 @@ MonoBehaviour:
     en: MB
   image: 
   building: {fileID: 5996087787355032460}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &8236975242559972792
 GameObject:
   m_ObjectHideFlags: 0
@@ -165053,6 +165203,21 @@ MonoBehaviour:
     en: 3
   image: 
   building: {fileID: 147920017869808059}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &8701613701817444061
 GameObject:
   m_ObjectHideFlags: 0
@@ -170163,6 +170328,21 @@ MonoBehaviour:
     en: P
   image: 
   building: {fileID: 8873309308505913240}
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &8970028097757473188
 GameObject:
   m_ObjectHideFlags: 0
