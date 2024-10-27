@@ -1356,7 +1356,8 @@ namespace IMDF.Feature
             [EnumMember(Value = "stadium.basketball")] stadiumBasketbal = 5,
             [EnumMember(Value = "stadium.volleyball")] stadiumVolleybal = 6,
             entrance = 7,
-            playground = 8
+            playground = 8,
+            bus = 10,
         }
 
         public class Properties
