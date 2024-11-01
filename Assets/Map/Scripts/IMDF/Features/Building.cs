@@ -37,7 +37,7 @@ namespace IMDF
 
         bool IRefferencePoint.showDisplayPoint => showDisplayPoint;
 
-        Address IAddress.address => addressId.address;
+        Address IAddress.address => addressId?.address;
 
         void Start()
         {
@@ -47,7 +47,7 @@ namespace IMDF
         public override void GenerateGUID()
         {
             base.GenerateGUID();
-            addressId.GenerateGUID();
+            addressId?.GenerateGUID();
         }
 
     }

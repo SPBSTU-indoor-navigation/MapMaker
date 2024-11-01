@@ -9,7 +9,7 @@ namespace IMDF
     public class DetailLine : FeatureMB
     {
         public IMDF.Feature.Detail.Category category;
-        public List<IMDF.Feature.Point[]> Lines()
+        public virtual List<IMDF.Feature.Point[]> Lines()
         {
             var lines = GetComponentsInChildren<LineRenderer>();
             var res = new List<IMDF.Feature.Point[]>();

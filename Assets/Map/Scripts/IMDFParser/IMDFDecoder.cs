@@ -1306,6 +1306,7 @@ namespace IMDF.Feature
             public LocalizedName name;
             public LocalizedName alt_name;
             public LocalizedName short_name;
+            public LocalizedName description;
             public string image;
             public Authors authors;
 
@@ -1318,6 +1319,7 @@ namespace IMDF.Feature
                 alt_name = attraction.altName.getFeature();
                 short_name = attraction.shortName.getFeature();
                 building_id = attraction.building.guid;
+                description = attraction.description.getFeature();
                 image = string.IsNullOrWhiteSpace(attraction.image) ? null : attraction.image;
 
 

@@ -27,6 +27,8 @@ namespace IMDF
         public string image;
         public Building building;
         [Space]
+        public LocalizedNameMultiline description;
+        [Space]
         public Authors authors;
 
         Guid? IAnnotation.identifier => guid;
