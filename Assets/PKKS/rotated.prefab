@@ -2713,6 +2713,9 @@ MonoBehaviour:
     en: 
   image: 
   building: {fileID: 1005701968}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -12159,7 +12162,7 @@ MonoBehaviour:
   altName:
     ru: 
     en: 
-  addressId: {fileID: 11400000, guid: 61443800c17c14aaea1eb01cb397d7ce, type: 2}
+  addressId: {fileID: 11400000, guid: 13dbef565c1d742e398b283519b16b01, type: 2}
   category: 4
   restriction: 0
   rotation: 0
@@ -18753,7 +18756,7 @@ MonoBehaviour:
   altName:
     ru: 
     en: 
-  addressId: {fileID: 11400000, guid: 61443800c17c14aaea1eb01cb397d7ce, type: 2}
+  addressId: {fileID: 11400000, guid: a3a597045971c4b1384113f2768f7e2a, type: 2}
   category: 4
   restriction: 0
   rotation: 0
@@ -21188,7 +21191,7 @@ MonoBehaviour:
   altName:
     ru: 
     en: 
-  addressId: {fileID: 11400000, guid: 61443800c17c14aaea1eb01cb397d7ce, type: 2}
+  addressId: {fileID: 11400000, guid: 13dbef565c1d742e398b283519b16b01, type: 2}
   category: 4
   restriction: 0
   rotation: 0
@@ -21438,7 +21441,10 @@ MonoBehaviour:
     ru: "\u0412"
     en: 
   image: 
-  building: {fileID: 1005701968}
+  building: {fileID: 673846196}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -39800,7 +39806,10 @@ MonoBehaviour:
     ru: "\u0421"
     en: 
   image: 
-  building: {fileID: 1005701968}
+  building: {fileID: 673846196}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -56216,7 +56225,10 @@ MonoBehaviour:
     ru: "\u0421"
     en: 
   image: 
-  building: {fileID: 1005701968}
+  building: {fileID: 673846196}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -57139,7 +57151,10 @@ MonoBehaviour:
     ru: M
     en: 
   image: 
-  building: {fileID: 1005701968}
+  building: {fileID: 673846196}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -60198,7 +60213,10 @@ MonoBehaviour:
     ru: M
     en: 
   image: 
-  building: {fileID: 1005701968}
+  building: {fileID: 673846196}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -64140,7 +64158,10 @@ MonoBehaviour:
     ru: "\u041F"
     en: 
   image: 
-  building: {fileID: 1005701968}
+  building: {fileID: 673846196}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
