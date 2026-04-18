@@ -508,6 +508,9 @@ MonoBehaviour:
     en: 9
   image: 
   building: {fileID: 551546959718588285}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:

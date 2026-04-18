@@ -812,6 +812,9 @@ MonoBehaviour:
     en: G2
   image: 
   building: {fileID: 4238174949126886265}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -6305,6 +6308,9 @@ MonoBehaviour:
     en: G1
   image: 
   building: {fileID: 4238174949126886265}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -11058,6 +11064,9 @@ MonoBehaviour:
     en: 9
   image: 
   building: {fileID: 7670577496423390008}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:

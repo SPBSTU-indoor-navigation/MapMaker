@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
 using System.Linq;
+using UnityEditor;
 using UnityEditor.SceneManagement;
+using UnityEngine;
 
 [ExecuteAlways]
 [RequireComponent(typeof(MeshFilter))]
@@ -88,6 +88,11 @@ public class PolygonGeometry : MonoBehaviour
                 {
                     var t = item.GetPath(i);
 
+                    if (lastPoints[item][i].Length != t.Length)
+                    {
+                        changed = true;
+                    }
+
                     for (int k = 0; k < t.Length; k++)
                     {
                         if (lastPoints[item][i].Length == t.Length && t[k] != lastPoints[item][i][k])
@@ -101,7 +106,7 @@ public class PolygonGeometry : MonoBehaviour
 
                     }
 
-                    lastPoints[item][i] = t;
+                    lastPoints[item][i] = t.Clone() as Vector2[];
                     if (changed)
                     {
                         item.SetPath(i, t);

@@ -11275,6 +11275,24 @@ MonoBehaviour:
     en: 
   image: Gydro
   building: {fileID: 6697579568464377371}
+  description:
+    ru: 
+    en: 
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &1786881966333947069
 GameObject:
   m_ObjectHideFlags: 0
@@ -29657,6 +29675,24 @@ MonoBehaviour:
     en: 1
   image: 
   building: {fileID: 4526390835906704169}
+  description:
+    ru: 
+    en: 
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &4925336200304960388
 GameObject:
   m_ObjectHideFlags: 0
@@ -33958,6 +33994,24 @@ MonoBehaviour:
     en: 2
   image: 
   building: {fileID: 4526390835906704169}
+  description:
+    ru: 
+    en: 
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &5811121524875655251
 GameObject:
   m_ObjectHideFlags: 0
@@ -34718,6 +34772,24 @@ MonoBehaviour:
     en: MB
   image: GZ
   building: {fileID: 6119955681321208400}
+  description:
+    ru: 
+    en: 
+  authors:
+    enbled: 0
+    shortText:
+      ru: 
+      en: 
+    title:
+      ru: 
+      en: 
+    description:
+      ru: 
+      en: 
+    authorsTitle:
+      ru: 
+      en: 
+    authors: []
 --- !u!1 &6026651752291758589
 GameObject:
   m_ObjectHideFlags: 0

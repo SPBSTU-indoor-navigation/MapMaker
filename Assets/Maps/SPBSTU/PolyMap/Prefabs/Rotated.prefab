@@ -15772,6 +15772,9 @@ MonoBehaviour:
     en: 6
   image: 
   building: {fileID: 8314129077352224380}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -16476,6 +16479,9 @@ MonoBehaviour:
     en: M
   image: 
   building: {fileID: 3412246804882393637}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -25749,6 +25755,9 @@ MonoBehaviour:
     en: 4
   image: 
   building: {fileID: 4154299254689604190}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -38479,6 +38488,9 @@ MonoBehaviour:
     en: "\u0421"
   image: 
   building: {fileID: 4154299254689604190}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -53092,6 +53104,9 @@ MonoBehaviour:
     en: 
   image: Gydro
   building: {fileID: 672231072120119760}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -70907,6 +70922,9 @@ MonoBehaviour:
     en: 5
   image: 
   building: {fileID: 7151302893209277713}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -84488,6 +84506,9 @@ MonoBehaviour:
     en: L
   image: 
   building: {fileID: 6129014417818639741}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -94784,6 +94805,9 @@ MonoBehaviour:
     en: 10
   image: 
   building: {fileID: 8314129077352224380}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -129636,6 +129660,9 @@ MonoBehaviour:
     en: SF
   image: 
   building: {fileID: 6093854641737836754}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -156483,6 +156510,9 @@ MonoBehaviour:
     en: MB
   image: 
   building: {fileID: 5996087787355032460}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -165203,6 +165233,9 @@ MonoBehaviour:
     en: 3
   image: 
   building: {fileID: 147920017869808059}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
@@ -170328,6 +170361,9 @@ MonoBehaviour:
     en: P
   image: 
   building: {fileID: 8873309308505913240}
+  description:
+    ru: 
+    en: 
   authors:
     enbled: 0
     shortText:
