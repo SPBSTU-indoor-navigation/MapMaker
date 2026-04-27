@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
 using System.Linq;
 using IMDF.Feature;
+using UnityEditor;
 using UnityEditor.SceneManagement;
+using UnityEngine;
 
 public class IMDFEditorWindow : EditorWindow
 {
@@ -29,6 +29,17 @@ public class IMDFEditorWindow : EditorWindow
         foreach (var item in colliders)
         {
             RecalculateCeneter(item);
+        }
+    }
+
+    void CenterToZero(PolygonCollider2D[] colliders)
+    {
+        Undo.RecordObjects(colliders.Select(t => t).ToArray(), "Center to zero");
+        Undo.RecordObjects(colliders.Select(t => t.transform).ToArray(), "Center to zero");
+        Undo.RecordObjects(colliders.Select(t => t.GetComponent<IRefferencePoint>()).Where(t => t != null).Select(t => t as Object).ToArray(), "Center to zero");
+        foreach (var item in colliders)
+        {
+            RecalculateCeneter(item, true);
         }
     }
 
@@ -93,19 +104,21 @@ public class IMDFEditorWindow : EditorWindow
         Selection.SetActiveObjectWithContext(go, go);
     }
 
-    void RecalculateCeneter(PolygonCollider2D p)
+    void RecalculateCeneter(PolygonCollider2D p, bool toZero = false)
     {
         Vector2 sum = p.points.Aggregate(Vector2.zero, (a, v) => a + v);
         Vector2 avg = sum / p.points.Length;
 
+        Vector2 offset = toZero ? -p.transform.localPosition : avg;
+
         Vector2[] t = p.points;
         for (var i = 0; i < p.points.Length; i++)
         {
-            t[i] -= avg;
+            t[i] -= offset;
         }
 
         p.points = t;
-        Vector3 delta = new Vector3(avg.x, avg.y, 0);
+        Vector3 delta = new Vector3(offset.x, offset.y, 0);
         p.transform.position += delta;
         for (var i = 0; i < p.transform.childCount; i++)
         {
@@ -175,13 +188,16 @@ public class IMDFEditorWindow : EditorWindow
         GUILayout.Label("ReAlign");
         EditorGUILayout.BeginHorizontal();
         {
+            PolygonCollider2D[] collidersWithoutLevel = Selection.gameObjects
+                .Where(t => t.GetComponent<IMDF.Level>() == null)
+                .Select(t => t.GetComponent<PolygonCollider2D>())
+                .Where(t => t != null).ToArray();
 
-            PolygonCollider2D[] colliders = Selection.gameObjects.Select(t => t.GetComponent<PolygonCollider2D>()).Where(t => t != null).ToArray();
-            EditorGUI.BeginDisabledGroup(colliders.Length == 0);
+            EditorGUI.BeginDisabledGroup(collidersWithoutLevel.Length == 0);
             {
                 if (GUILayout.Button("Selected"))
                 {
-                    Recenter(colliders);
+                    Recenter(collidersWithoutLevel);
                 }
             }
             EditorGUI.EndDisabledGroup();
@@ -205,6 +221,14 @@ public class IMDFEditorWindow : EditorWindow
                     item.displayPoint = Vector3.zero;
                 }
                 EditorUtility.SetDirty(Selection.gameObjects[0]);
+            }
+
+            if (GUILayout.Button("Center to zero (selected)"))
+            {
+                PolygonCollider2D[] colliders = Selection.gameObjects
+                    .Select(t => t.GetComponent<PolygonCollider2D>())
+                    .Where(t => t != null).ToArray();
+                CenterToZero(colliders);
             }
         }
         EditorGUI.EndDisabledGroup();
