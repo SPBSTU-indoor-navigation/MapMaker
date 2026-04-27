@@ -36,9 +36,9 @@ public class IMDFEditorWindow : EditorWindow
     {
         Undo.RecordObjects(colliders.Select(t => t).ToArray(), "Center to zero");
         Undo.RecordObjects(colliders.Select(t => t.transform).ToArray(), "Center to zero");
-        Undo.RecordObjects(colliders.Select(t => t.GetComponent<IRefferencePoint>()).Where(t => t != null).Select(t => t as Object).ToArray(), "Center to zero");
         foreach (var item in colliders)
         {
+            Undo.RecordObjects(item.transform.GetComponentsInChildren<Transform>(), "Center to zero");
             RecalculateCeneter(item, true);
         }
     }
@@ -222,12 +222,16 @@ public class IMDFEditorWindow : EditorWindow
                 }
                 EditorUtility.SetDirty(Selection.gameObjects[0]);
             }
+        }
+        EditorGUI.EndDisabledGroup();
 
+        PolygonCollider2D[] colliders = Selection.gameObjects
+            .Select(t => t.GetComponent<PolygonCollider2D>())
+            .Where(t => t != null).ToArray();
+        EditorGUI.BeginDisabledGroup(colliders.Length == 0);
+        {
             if (GUILayout.Button("Center to zero (selected)"))
             {
-                PolygonCollider2D[] colliders = Selection.gameObjects
-                    .Select(t => t.GetComponent<PolygonCollider2D>())
-                    .Where(t => t != null).ToArray();
                 CenterToZero(colliders);
             }
         }
