@@ -25,6 +25,7 @@ public class IMDFEditorWindow : EditorWindow
     {
         Undo.RecordObjects(colliders.Select(t => t).ToArray(), "Recenter");
         Undo.RecordObjects(colliders.Select(t => t.transform).ToArray(), "Recenter");
+        Undo.RecordObjects(colliders.SelectMany(t => t.GetComponentsInChildren<Transform>()).ToArray(), "Recenter");
         Undo.RecordObjects(colliders.Select(t => t.GetComponent<IRefferencePoint>()).Where(t => t != null).Select(t => t as Object).ToArray(), "Recenter");
         foreach (var item in colliders)
         {
@@ -106,10 +107,13 @@ public class IMDFEditorWindow : EditorWindow
 
     void RecalculateCeneter(PolygonCollider2D p, bool toZero = false)
     {
-        Vector2 sum = p.points.Aggregate(Vector2.zero, (a, v) => a + v);
+        Vector2 sum = p.points
+            .Select(v => p.transform.TransformPoint(v))
+            .Aggregate(Vector2.zero, (a, v) => a + (Vector2)v);
+
         Vector2 avg = sum / p.points.Length;
 
-        Vector2 offset = toZero ? -p.transform.localPosition : avg;
+        Vector2 offset = toZero ? -p.transform.localPosition : p.transform.InverseTransformPoint(avg);
 
         Vector2[] t = p.points;
         for (var i = 0; i < p.points.Length; i++)
@@ -118,7 +122,7 @@ public class IMDFEditorWindow : EditorWindow
         }
 
         p.points = t;
-        Vector3 delta = new Vector3(offset.x, offset.y, 0);
+        Vector3 delta = p.transform.TransformVector(new Vector3(offset.x, offset.y, 0));
         p.transform.position += delta;
         for (var i = 0; i < p.transform.childCount; i++)
         {
