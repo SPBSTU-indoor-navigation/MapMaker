@@ -3403,7 +3403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480412809022896671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.125, y: 4.75, z: 0}
+  m_LocalPosition: {x: -4.625, y: 4.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8243,7 +8243,7 @@ GameObject:
   - component: {fileID: 395095288067146773}
   - component: {fileID: 8322966543810380118}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8384,11 +8384,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Classroom _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -8411,7 +8411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &986208711992018320
@@ -17508,7 +17508,7 @@ GameObject:
   - component: {fileID: 2118267505251989773}
   - component: {fileID: 6743350660036048879}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17649,11 +17649,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Cabinet _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -17662,7 +17662,7 @@ MonoBehaviour:
   iconUrl: 
   description: 
   website: 
-  occupantCategory: 10000
+  occupantCategory: 2
   displayPoint_: {x: -4.75, y: -4.375}
 --- !u!114 &6743350660036048879
 MonoBehaviour:
@@ -17676,7 +17676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &2040195297363581837
@@ -22977,7 +22977,7 @@ GameObject:
   - component: {fileID: 6337537925273986204}
   - component: {fileID: 415779784079308891}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23118,11 +23118,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Classroom _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -23145,7 +23145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &2727798657521172347
@@ -24503,7 +24503,7 @@ GameObject:
   - component: {fileID: 1633100748582878845}
   - component: {fileID: 4563562022974163139}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24644,11 +24644,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Classroom _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -24671,7 +24671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &2896847479109846140
@@ -35574,7 +35574,7 @@ GameObject:
   - component: {fileID: 6127370478334943260}
   - component: {fileID: 4835734124644837373}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35715,11 +35715,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Classroom _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -35742,7 +35742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &4157926084075772126
@@ -47881,7 +47881,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5581272282070536752}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -5.416668, y: -4.166669, z: -0.2}
+  m_LocalPosition: {x: -5.416664, y: -3.916669, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49113,7 +49113,7 @@ GameObject:
   - component: {fileID: 845846942560692582}
   - component: {fileID: 8370391204380575070}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49254,11 +49254,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Cabinet _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -49267,7 +49267,7 @@ MonoBehaviour:
   iconUrl: 
   description: 
   website: 
-  occupantCategory: 10000
+  occupantCategory: 2
   displayPoint_: {x: -4.75, y: -4.375}
 --- !u!114 &8370391204380575070
 MonoBehaviour:
@@ -49281,7 +49281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &5704648891288017302
@@ -59285,7 +59285,7 @@ GameObject:
   - component: {fileID: 1864835659220472651}
   - component: {fileID: 7086337833248721221}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59426,11 +59426,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Classroom _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -59453,7 +59453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &6929402086515277087
@@ -61386,7 +61386,7 @@ GameObject:
   - component: {fileID: 2159830057800559221}
   - component: {fileID: 8581635094652294131}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61527,11 +61527,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Classroom _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -61554,7 +61554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &7188976877074965112
@@ -64060,7 +64060,7 @@ GameObject:
   - component: {fileID: 1277510020271136372}
   - component: {fileID: 3832305458405039770}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64201,11 +64201,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Cabinet _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -64214,7 +64214,7 @@ MonoBehaviour:
   iconUrl: 
   description: 
   website: 
-  occupantCategory: 10000
+  occupantCategory: 2
   displayPoint_: {x: -4.75, y: -4.375}
 --- !u!114 &3832305458405039770
 MonoBehaviour:
@@ -64228,7 +64228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &7432472387009638259
@@ -72170,7 +72170,7 @@ GameObject:
   - component: {fileID: 2795341001178349482}
   - component: {fileID: 8378742899643340581}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72311,11 +72311,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Cabinet _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -72324,7 +72324,7 @@ MonoBehaviour:
   iconUrl: 
   description: 
   website: 
-  occupantCategory: 10000
+  occupantCategory: 2
   displayPoint_: {x: -4.75, y: -4.375}
 --- !u!114 &8378742899643340581
 MonoBehaviour:
@@ -72338,7 +72338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &8245695453739897633
@@ -72879,7 +72879,7 @@ GameObject:
   - component: {fileID: 3082496043758034649}
   - component: {fileID: 6449167205001498000}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73020,11 +73020,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Classroom _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -73047,7 +73047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &8280722147802462399
@@ -73067,7 +73067,7 @@ GameObject:
   - component: {fileID: 1945566297939003833}
   - component: {fileID: 4965126573758904778}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73208,11 +73208,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Cabinet _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -73221,7 +73221,7 @@ MonoBehaviour:
   iconUrl: 
   description: 
   website: 
-  occupantCategory: 10000
+  occupantCategory: 2
   displayPoint_: {x: -4.75, y: -4.375}
 --- !u!114 &4965126573758904778
 MonoBehaviour:
@@ -73235,7 +73235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &8286754150263861398
@@ -75024,7 +75024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &465792294465795725
 Transform:
   m_ObjectHideFlags: 0
@@ -77078,7 +77078,7 @@ GameObject:
   - component: {fileID: 3670932979337448716}
   - component: {fileID: 8399786214179085926}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77219,11 +77219,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Classroom _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -77246,7 +77246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &8770935176940694159
@@ -81704,7 +81704,7 @@ GameObject:
   - component: {fileID: 110423932509125906}
   - component: {fileID: 3713836697652527743}
   m_Layer: 0
-  m_Name: classroom__
+  m_Name: classroom_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81845,11 +81845,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   localizedName:
-    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 _"
-    en: Classroom _
+    ru: "\u041A\u0430\u0431\u0438\u043D\u0435\u0442 "
+    en: 'Classroom '
   altName:
-    ru: _
-    en: _
+    ru: 
+    en: 
   category: 2
   restriction: 2
   showDisplayPoint: 0
@@ -81872,7 +81872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e66caad402045888b05283b4e13366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: _
+  name: 
   templateRU: 
   templateEN: 
 --- !u!1 &9196814258787987540
@@ -82005,7 +82005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7124720975899764954
 Transform:
   m_ObjectHideFlags: 0
@@ -83719,7 +83719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8143783289192559122, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.375
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9039834666440500083, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_RootOrder
@@ -84631,7 +84631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8143783289192559122, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.375
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9039834666440500083, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_RootOrder
@@ -85054,7 +85054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8143783289192559122, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.375
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9039834666440500083, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_RootOrder
@@ -85732,7 +85732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2699373564185621381, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2500001
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 2699373564185621381, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_LocalPosition.y
@@ -85960,7 +85960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8143783289192559122, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.375
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9039834666440500083, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_RootOrder
@@ -86272,6 +86272,10 @@ PrefabInstance:
     - target: {fileID: 7904538732711720861, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: neighbors.Array.data[2]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143783289192559122, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9039834666440500083, guid: 78fe37f1c56e3404dbbb1b2a3c683204, type: 3}
       propertyPath: m_RootOrder
